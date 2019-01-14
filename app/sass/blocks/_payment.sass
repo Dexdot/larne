@@ -1,0 +1,56 @@
+// 4 этап чекаута - Способ оплаты
+  
+.payment
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  // padding-left: 8.5vw
+  // padding-right: 8.5vw
+  padding-bottom: 5em
+
+  @media (max-width: 500px)
+    padding-left: 13%
+    padding-right: 13%
+
+  &__cards
+    margin-top: 44px
+    margin-bottom: 24px
+  &__card
+    margin-bottom: 16px
+    .i-daw
+      display: none
+    &--is-active
+      &::before
+        transform: translateY(0)
+      .i-daw
+        display: block
+    &:last-child
+      margin-bottom: 0
+    &-new
+      +unbtn
+      +tt(md)
+      font-size: 14px
+      letter-spacing: 0.05em
+      margin-bottom: 80px
+      color: #3f93ce
+      &:disabled
+        color: rgba($black, 0.5)
+    &-input
+      opacity: 0
+      pointer-events: none
+      user-select: none
+      &--is-visible
+        opacity: 1
+        pointer-events: auto
+        user-select: auto
+
+.payment
+  .checkbox
+    width: 240px
+    display: block
+    margin-bottom: 20px
+  .checkbox__input
+    cursor: pointer
+   

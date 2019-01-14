@@ -1,0 +1,71 @@
+@include('../blocks/head.html')
+<!-- ./head -->
+
+@include('../blocks/preloader.html')
+
+<main class="main-wrapper">
+	@include('../blocks/header.html')
+	<div class="contacts-map"></div>
+	<div class="contacts">
+		<div class="fluid">
+			<div class="contacts__inner">
+
+				<!-- contacts__left -->
+				<div class="contacts__left">
+					<h1 class="contacts__title">Контакты</h1>
+					<a class="contacts__phone" href="tel:+79219829526">+7 921 982-95-26</a>
+				</div>
+				<!-- ./contacts__left -->
+
+				<!-- contacts__right -->
+				<div class="contacts__right">
+					<div class="contacts__col">
+						<div class="contacts__block">
+							<h2 class="contacts__subtitle">Шоурум Larne</h2>
+							<p class="contacts__text">
+								191025, Санкт-Петербург, ул. Марата, д.12,
+								<br> пом. 11Н. ВТ-СБ, 13:00 — 21:00
+							</p>
+						</div>
+						<div class="contacts__block">
+							<h2 class="contacts__subtitle">Реквизиты</h2>
+							<p class="contacts__text">
+								ИП Резниченко Анастасия Александровна
+								<br> ОГРН 310774623100091
+							</p>
+						</div>
+					</div>
+					<button class="contacts__btn anim-blink">Связаться с нами</button>
+				</div>
+				<!-- ./contacts__right -->
+
+			</div>
+		</div>
+	</div>
+</main>
+
+
+<!-- callback -->
+@include('../blocks/callback.html')
+
+<!-- menu -->
+@include('../blocks/menu.html')
+<!-- help -->
+@include('../blocks/help.html')
+<!-- checkout -->
+@include('../blocks/checkout.html')
+<!-- reg -->
+@include('../blocks/reg.html')
+<!-- recovery -->
+@include('../blocks/recovery.html')
+<!-- login -->
+@include('../blocks/login.html')
+<!-- search -->
+@include('../blocks/search.html')
+<!-- subscribe -->
+@include('../blocks/subscribe.html')
+
+<script defer src="js/contacts.js"></script>
+
+<!-- footer -->
+@include('../blocks/footer.html')

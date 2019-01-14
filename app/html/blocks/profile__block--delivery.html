@@ -1,0 +1,266 @@
+<div class="profile__block profile__block--delivery">
+
+  <!-- profile__content -->
+  <div class="profile__content">
+    <h2 class="profile__title">Адрес доставки</h2>
+    <button class="info-card" data-profile="delivery" id="someUniqId">
+      <span class="info-card__title">Василиса</span>
+      <span class="info-card__subtitle">192288, Санкт-Петербург</span>
+      <span class="info-card__subtitle">ул. Маяковская, д. 30, кв. 21</span>
+      @include('../svg/arrow-down.html')
+    </button>
+    <button class="info-card" data-profile="delivery" id="someUniqId-2">
+      <span class="info-card__title">Василиса</span>
+      <span class="info-card__subtitle">228 Park Ave S</span>
+      <span class="info-card__subtitle">New York, NY 10003-1502</span>
+      @include('../svg/arrow-down.html')
+    </button>
+    <button class="profile__add profile__add--delivery" data-profile="delivery" id="add-delivery">Добавить адрес</button>
+  </div>
+  <!-- ./profile__content -->
+
+  <!-- profile__content--empty -->
+  <div class="profile__content profile__content--empty">
+    <h2 class="profile__title">Адрес доставки</h2>
+    <button class="info-card info-card--empty" data-profile="delivery" id="add-delivery">
+      <span class="info-card__title">Добавить новый адрес</span>
+      @include('../svg/plus.html')
+    </button>
+  </div>
+  <!-- ./profile__content--empty -->
+
+  <!-- profile-form -->
+  <div class="profile-form" data-form="someUniqId">
+    <button class="profile-form__overlay"></button>
+    <form class="profile-form__form">
+      <button class="profile-form__close" type="button">
+        @include('../svg/arrow-circle.html')
+      </button>
+      <div class="profile-form__content">
+        <span class="profile-form__title">Изменить адрес</span>
+
+        <div class="input">
+          <label class="input__label">
+            <input class="input__field" type="text" required placeholder="Имя" value="Василиса">
+          </label>
+          <span class="input__tip input__tip--danger">Заполните поле</span>
+        </div>
+
+        <div class="input">
+          <label class="input__label">
+            <input class="input__field" type="text" required placeholder="Страна" value="Россия">
+          </label>
+          <span class="input__tip input__tip--danger">Заполните поле</span>
+        </div>
+
+        <div class="input">
+          <label class="input__label">
+            <input class="input__field" type="text" required placeholder="Город" value="Санкт-Петербург">
+          </label>
+          <span class="input__tip input__tip--danger">Заполните поле</span>
+        </div>
+
+        <div class="input">
+          <label class="input__label">
+            <input class="input__field" type="text" required placeholder="Улица" value="Маяковская">
+          </label>
+          <span class="input__tip input__tip--danger">Заполните поле</span>
+        </div>
+
+        <div class="input-row">
+          <div class="input">
+            <label class="input__label">
+              <input class="input__field" type="text" required placeholder="Дом" value="13">
+            </label>
+            <span class="input__tip input__tip--danger">Заполните поле</span>
+          </div>
+
+          <div class="input">
+            <label class="input__label">
+              <input class="input__field" type="text" required placeholder="Корпус">
+            </label>
+            <span class="input__tip input__tip--danger">Заполните поле</span>
+          </div>
+        </div>
+
+        <div class="input-row">
+          <div class="input">
+            <label class="input__label">
+              <input class="input__field" type="text" required placeholder="Квартира" value="21">
+            </label>
+            <span class="input__tip input__tip--danger">Заполните поле</span>
+          </div>
+
+          <div class="input">
+            <label class="input__label">
+              <input class="input__field" type="text" required placeholder="Индекс" value="192288">
+            </label>
+            <span class="input__tip input__tip--danger">Заполните поле</span>
+          </div>
+        </div>
+
+        <button class="profile__remove profile__remove--address" type="button">Удалить адрес</button>
+
+      </div>
+      <button class="btn btn--lg profile-form__btn profile-form__btn--delivery" type="submit">Сохранить</button>
+    </form>
+  </div>
+  <!-- ./profile-form -->
+
+  <!-- profile-form -->
+  <div class="profile-form" data-form="someUniqId-2">
+    <button class="profile-form__overlay"></button>
+    <form class="profile-form__form">
+      <button class="profile-form__close" type="button">
+        @include('../svg/arrow-circle.html')
+      </button>
+      <div class="profile-form__content">
+        <span class="profile-form__title">Изменить адрес</span>
+
+        <div class="input">
+          <label class="input__label">
+            <input class="input__field" type="text" required placeholder="Имя" value="Василиса">
+          </label>
+          <span class="input__tip input__tip--danger">Заполните поле</span>
+        </div>
+
+        <div class="input">
+          <label class="input__label">
+            <input class="input__field" type="text" required placeholder="Страна" value="USA">
+          </label>
+          <span class="input__tip input__tip--danger">Заполните поле</span>
+        </div>
+
+        <div class="input">
+          <label class="input__label">
+            <input class="input__field" type="text" required placeholder="Город" value="New York">
+          </label>
+          <span class="input__tip input__tip--danger">Заполните поле</span>
+        </div>
+
+        <div class="input">
+          <label class="input__label">
+            <input class="input__field" type="text" required placeholder="Улица" value="Park Ave S">
+          </label>
+          <span class="input__tip input__tip--danger">Заполните поле</span>
+        </div>
+
+        <div class="input-row">
+          <div class="input">
+            <label class="input__label">
+              <input class="input__field" type="text" required placeholder="Дом" value="228">
+            </label>
+            <span class="input__tip input__tip--danger">Заполните поле</span>
+          </div>
+
+          <div class="input">
+            <label class="input__label">
+              <input class="input__field" type="text" required placeholder="Корпус">
+            </label>
+            <span class="input__tip input__tip--danger">Заполните поле</span>
+          </div>
+        </div>
+
+        <div class="input-row">
+          <div class="input">
+            <label class="input__label">
+              <input class="input__field" type="text" required placeholder="Квартира" value="21">
+            </label>
+            <span class="input__tip input__tip--danger">Заполните поле</span>
+          </div>
+
+          <div class="input">
+            <label class="input__label">
+              <input class="input__field" type="text" required placeholder="Индекс" value="10003-1502">
+            </label>
+            <span class="input__tip input__tip--danger">Заполните поле</span>
+          </div>
+        </div>
+
+        <button class="profile__remove profile__remove--address" type="button">Удалить адрес</button>
+
+      </div>
+      <button class="btn btn--lg profile-form__btn profile-form__btn--delivery" type="submit">Сохранить</button>
+    </form>
+  </div>
+  <!-- ./profile-form -->
+
+  <!-- profile-form -->
+  <div class="profile-form" data-form="add-delivery">
+    <button class="profile-form__overlay"></button>
+    <form class="profile-form__form">
+      <button class="profile-form__close" type="button">
+        @include('../svg/arrow-circle.html')
+      </button>
+      <div class="profile-form__content">
+        <span class="profile-form__title">Изменить адрес</span>
+
+        <div class="input">
+          <label class="input__label">
+            <input class="input__field" type="text" required placeholder="Имя" value="">
+          </label>
+          <span class="input__tip input__tip--danger">Заполните поле</span>
+        </div>
+
+        <div class="input">
+          <label class="input__label">
+            <input class="input__field" type="text" required placeholder="Страна" value="">
+          </label>
+          <span class="input__tip input__tip--danger">Заполните поле</span>
+        </div>
+
+        <div class="input">
+          <label class="input__label">
+            <input class="input__field" type="text" required placeholder="Город" value="">
+          </label>
+          <span class="input__tip input__tip--danger">Заполните поле</span>
+        </div>
+
+        <div class="input">
+          <label class="input__label">
+            <input class="input__field" type="text" required placeholder="Улица" value="">
+          </label>
+          <span class="input__tip input__tip--danger">Заполните поле</span>
+        </div>
+
+        <div class="input-row">
+          <div class="input">
+            <label class="input__label">
+              <input class="input__field" type="text" required placeholder="Дом" value="">
+            </label>
+            <span class="input__tip input__tip--danger">Заполните поле</span>
+          </div>
+
+          <div class="input">
+            <label class="input__label">
+              <input class="input__field" type="text" required placeholder="Корпус" value="">
+            </label>
+            <span class="input__tip input__tip--danger">Заполните поле</span>
+          </div>
+        </div>
+
+        <div class="input-row">
+          <div class="input">
+            <label class="input__label">
+              <input class="input__field" type="text" required placeholder="Квартира" value="">
+            </label>
+            <span class="input__tip input__tip--danger">Заполните поле</span>
+          </div>
+
+          <div class="input">
+            <label class="input__label">
+              <input class="input__field" type="text" required placeholder="Индекс" value="">
+            </label>
+            <span class="input__tip input__tip--danger">Заполните поле</span>
+          </div>
+        </div>
+
+        <button class="profile__remove profile__remove--address" type="button">Удалить адрес</button>
+
+      </div>
+      <button class="btn btn--lg profile-form__btn profile-form__btn--delivery" type="submit">Сохранить</button>
+    </form>
+  </div>
+  <!-- ./profile-form -->
+
+</div>

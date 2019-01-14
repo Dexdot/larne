@@ -1,0 +1,51 @@
+#products
+  overflow: hidden
+  min-height: 100vh
+
+  display: flex
+  flex-direction: column
+  align-items: stretch
+  justify-content: space-between
+  // .footer
+  //   margin-top: auto
+
+.products
+  width: 100%
+  padding-left: 5.5%
+  display: flex
+  align-items: stretch
+  justify-content: space-between
+
+  margin-top: 64px  
+  &-wrapper
+    margin-top: 8em
+    margin-bottom: 8.5em
+    @media (max-width: 480px)
+      // margin-top: 90px
+      margin-top: 12.5vh
+      margin-bottom: 64px
+      padding-left: 5%
+    .fluid:first-child
+      @media (max-width: 480px)
+        padding-left: 0
+  &-aside
+    // min-width: calc(25% - 2.75vw + 28px)
+    // width: calc(25% - 2.75vw + 28px)
+    position: relative
+    flex: 1
+    display: flex
+    align-items: center
+  &__content
+    width: 100%
+    display: flex
+    justify-content: flex-start
+  @media (max-width: 480px)
+    margin-top: 40px
+
+.mob
+  #products
+    @media (max-width: 480px)
+      min-height: unset
+  .products-wrapper
+    @media (max-width: 480px)
+      margin-top: 64px

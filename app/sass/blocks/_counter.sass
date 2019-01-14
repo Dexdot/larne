@@ -1,0 +1,25 @@
+.counter
+  margin-left: auto
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+
+  +tt(md)
+  font-size: 18px
+  &__btn
+    +unbtn
+
+    width: 24px
+    height: 24px
+
+    transform: translateY(4px)
+    svg
+      width: 18px
+      height: 18px
+  &__btn--minus
+    margin-right: 4px
+  &__btn--plus
+    margin-left: 4px
+  &__input
+    display: none

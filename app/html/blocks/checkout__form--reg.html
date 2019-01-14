@@ -1,0 +1,65 @@
+<form class="checkout__form checkout__form--auth checkout__form--reg">
+  <div class="checkout__content">
+    @include('../blocks/checkout__top.html')
+    <span class="checkout__title">Добро пожаловать!</span>
+    <p class="checkout__subtitle">Заполните необходимую информацию, чтобы создать аккаунт</p>
+
+    <div class="input reg__input">
+      <label class="input__label">
+        <input class="input__field" type="tex" required placeholder="Имя">
+      </label>
+      <span class="input__tip input__tip--danger">Заполните поле</span>
+    </div>
+
+    <div class="input reg__input">
+      <label class="input__label">
+        <input class="input__field" type="email" required placeholder="Email">
+      </label>
+      <span class="input__tip input__tip--danger">Заполните поле</span>
+    </div>
+
+    <div class="input reg__input">
+      <label class="input__label">
+        <input class="input__field" type="password" required placeholder="Пароль">
+      </label>
+      <span class="input__tip input__tip--danger">Заполните поле</span>
+    </div>
+
+    <div class="input reg__input">
+      <label class="input__label">
+        <input class="input__field" type="tel" required placeholder="Телефон">
+      </label>
+      <span class="input__tip input__tip--danger">Заполните поле</span>
+    </div>
+
+    <label class="checkbox checkout__policy">
+      <input type="checkbox" class="checkbox__input" required checked> Выражаю согласие с @include('../svg/daw.html') условиями использования
+      <br>и
+      <span class="checkbox__btn checkout__policy-link">политикой</span> конфиденциальности
+    </label>
+
+    <div class="checkout__signin-tip"> Уже зарегистрированы?
+      <button class="checkout__signin" type="button">
+        Войти в аккаунт
+      </button>
+    </div>
+
+    <div class="social">
+      <span class="social__tip">Быстрая регистрация:</span>
+      <button class="social__btn social__btn--fb" type="button">
+        @include('../svg/fb.html')
+      </button>
+      <button class="social__btn social__btn--vk" type="button">
+        @include('../svg/vk.html')
+      </button>
+      <button class="social__btn social__btn--twitter" type="button">
+        @include('../svg/twitter.html')
+      </button>
+      <button class="social__btn social__btn--more" type="button">
+        @include('../svg/more.html')
+      </button>
+    </div>
+
+  </div>
+  <button class="btn btn--lg checkout__btn checkout__btn--reg" type="submit">Зарегистрироваться</button>
+</form>

@@ -1,0 +1,131 @@
+<form class="checkout__form checkout__form--confirm">
+  <div class="checkout__content">
+    @include('../blocks/checkout__top.html')
+    <span class="checkout__title">Подтверждение заказа</span>
+    <div class="confirm">
+
+      <div class="cart__products">
+        <div class="cart__product cart__product--once">
+          <div class="cart__img-wrap">
+            <img class="cart__img" src="img/cart-img.jpg" alt="Голубое платье с пышной юбкой">
+            <span class="cart__amount-icon"></span>
+          </div>
+          <div class="cart__info">
+            <div class="cart__info-block">
+              <span class="cart__name">Голубое платье с пышной юбкой</span>
+              <span class="cart__code">М01/737</span>
+              <div class="cart__footer">
+                <span class="cart__size">Размер M</span>
+                <button class="cart__remove" type="button">Удалить</button>
+                <button class="cart__recovery" type="button">Восстановить</button>
+              </div>
+            </div>
+            <div class="cart__result">
+              <span class="cart__price">
+                <span class="cart__price-num">6500</span>
+                &#8381;
+              </span>
+              <span class="cart__amount"></span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="cart__product cart__product--is-removed">
+          <div class="cart__img-wrap">
+            <img class="cart__img" src="img/cart-img.jpg" alt="Платье с пышной юбкой с геометричным принтом">
+            <span class="cart__amount-icon">2</span>
+          </div>
+          <div class="cart__info">
+            <div class="cart__info-block">
+              <span class="cart__name">Платье с пышной юбкой с геометричным принтом</span>
+              <span class="cart__code">М01/737</span>
+              <div class="cart__footer">
+                <span class="cart__size">Размеры XS, S</span>
+                <button class="cart__remove" type="button">Удалить</button>
+                <button class="cart__recovery" type="button">Восстановить</button>
+              </div>
+            </div>
+            <div class="cart__result">
+              <span class="cart__price">
+                <span class="cart__price-num">13 000</span>
+                &#8381;
+              </span>
+              <span class="cart__amount">
+                <span class="cart__amount-num">2</span> x
+                <span class="cart__amount-price">6500</span>
+                &#8381;</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <fieldset class="cart__group">
+        <div class="input input--readonly cart__input--result">
+          <label class="input__label">
+            <input class="input__field" type="text" required readonly value="16400">
+          </label>
+          <div class="input__result">
+            <span class="input__result-name">Сумма</span>
+            <span>
+              <span class="input__result-value">16400</span>&#8381;</span>
+          </div>
+        </div>
+
+        <div class="input input--readonly cart__input--result">
+          <label class="input__label">
+            <input class="input__field" type="text" required readonly value="1100">
+          </label>
+          <div class="input__result">
+            <span class="input__result-name">Доставка</span>
+            <span>
+              <span class="input__result-value">800</span>&#8381;</span>
+          </div>
+        </div>
+
+        <div class="input input--readonly cart__input--result">
+          <label class="input__label">
+            <input class="input__field" type="text" required readonly value="1100">
+          </label>
+          <div class="input__result">
+            <span class="input__result-name">Скидка</span>
+            <span>
+              <span class="input__result-value">1100</span>&#8381;</span>
+          </div>
+        </div>
+
+        <p class="cart__total">
+          <span>Итого</span>
+          <span>
+            <span class="cart__total-num">15300</span>
+            &#8381;</span>
+        </p>
+      </fieldset>
+
+      <div class="confirm__delivery">
+        <div class="confirm__title">
+          Условия доставки
+          <button class="confirm__edit confirm__edit--delivery" type="button">
+            @include('../svg/pencil.html')
+          </button>
+        </div>
+        <p class="confirm__text">Курьер, 12/05/2018 с 14:45 до 16:45</p>
+        <p class="confirm__text">192288, Санкт-Петербург, ул. Маяковская, д. 30, кв. 21</p>
+      </div>
+
+      <div class="confirm__payment">
+        <div class="confirm__title">
+          Способ оплаты
+          <button class="confirm__edit confirm__edit--payment" type="button">
+            @include('../svg/pencil.html')
+          </button>
+        </div>
+        <p class="confirm__text">Банковская карта</p>
+        <p class="confirm__text">Mastercard **** **** **** 8800</p>
+      </div>
+
+    </div>
+  </div>
+  <button class="btn btn--lg checkout__btn checkout__btn--confirm" type="submit">Оплатить</button>
+</form>

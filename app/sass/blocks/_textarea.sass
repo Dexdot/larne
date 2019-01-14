@@ -1,0 +1,24 @@
+// <textarea class="textarea" placeholder="Введите сообщение"></textarea>  
+  
+.textarea
+  width: 100%
+  min-height: 160px
+  height: 160px
+  padding: 32px 24px
+  padding-right: 22px
+  margin-top: 24px
+
+  resize: none
+  border: 0
+  background: #fafafa
+  +scrollbar
+
+  +tt(md)
+  font-size: 14px
+  line-height: 26px
+  letter-spacing: 0.075em
+  color: rgba($black, 0.5)
+  &:focus
+    outline: none
+  @media (max-width: 480px)
+    padding: 24px

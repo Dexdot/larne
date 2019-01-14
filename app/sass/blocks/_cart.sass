@@ -1,0 +1,281 @@
+// 1 этап чекаута - корзина
+  
+.cart
+  width: 100%
+  margin-top: 3.5em
+  padding: 0 8.5vw 5em 8.5vw
+  padding-bottom: 40px
+  
+  @media (max-width: 1230px)
+    padding: 0 5.5vw 5em 5.5vw
+    padding-bottom: 40px
+  @media (max-width: 500px)
+    // padding: 0 5vw 5em 5vw
+    padding: 0 10vw 5em 10vw
+    padding-bottom: 40px
+
+  &__product
+    width: 100%
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+    margin-top: 24px
+    &:first-child
+      margin-top: 0
+  &__img
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
+    border-radius: 4px
+    &-empty
+      display: block
+      max-width: 100%
+      margin: 0 auto
+      height: auto
+  &__img-wrap
+    position: relative
+    min-width: 120px
+    width: 120px
+    height: 183px
+    border-radius: 4px
+    @media (min-width: 1900px)
+      min-width: 6.25vw
+      width: 6.25vw
+    @media (max-width: 500px)
+      min-width: 80px
+      width: 80px
+      height: 122px
+  &__amount
+    &-icon
+      display: block
+      border-radius: 50%
+      width: 18px
+      height: 18px
+      background: $black
+
+      text-align: center
+      line-height: 18px
+      font-size: 8px
+      color: #fff
+      
+      position: absolute
+      top: 0
+      left: 120px
+      transform: translate(-50%, -50%)
+      @media (min-width: 1900px)
+        left: 6.25vw
+      @media (max-width: 500px)
+        left: 80px
+  &__info
+    display: flex
+    flex-direction: row
+    // align-items: flex-start
+    align-items: stretch
+    justify-content: space-between
+    padding-left: 40px
+    flex: 1
+    &-block
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      justify-content: flex-start
+      flex: 1
+    @media (max-width: 500px)
+      padding-left: 24px
+      flex-direction: column
+      justify-content: flex-start
+
+  &__name
+    +tt(md)
+    font-size: 12px
+    line-height: 1.5
+    letter-spacing: 0.05em
+    text-transform: uppercase
+    margin-bottom: 4px
+    @media (max-width: 500px)
+      font-size: 10px
+  &__code
+    +tt(md)
+    line-height: 1
+    font-size: 10px
+    letter-spacing: 0.1em
+    text-transform: uppercase
+    opacity: 0.4
+    margin-bottom: 12px
+  &__footer
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+    @media (max-width: 500px)
+      justify-content: space-between
+  &__size
+    +tt(md)
+    font-size: 12px
+    letter-spacing: 0.05em
+    margin-right: 16px
+    @media (max-width: 500px)
+      font-size: 10px
+  &__remove
+    +unbtn
+    +tt(md)
+    font-size: 12px
+    letter-spacing: 0.05em
+    margin-right: 16px
+    opacity: 0.4
+    @media (max-width: 500px)
+      font-size: 10px
+  &__recovery
+    +unbtn
+    +tt(md)
+    font-size: 12px
+    letter-spacing: 0.05em
+    margin-right: 16px
+    display: none
+    @media (max-width: 500px)
+      font-size: 10px
+  &__result div:first-child
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    justify-content: flex-start
+  &__result
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    justify-content: space-between
+    min-width: 104px
+    @media (max-width: 500px)
+      margin-top: 12px
+      min-width: auto
+      flex-direction: row
+      align-items: flex-start
+  &__price
+    font-size: 14px
+    +tt(ex)
+    text-transform: uppercase
+    margin-bottom: 2px
+    &-num
+      margin-right: 5px
+    @media (max-width: 500px)
+      font-size: 12px
+  &__amount
+    text-transform: uppercase
+    font-size: 10px
+    +tt(md)
+    @media (max-width: 500px)
+      font-size: 8px
+      margin-left: 12px
+      transform: translateY(2px)
+
+  &__group
+    padding-top: 80px
+  
+  // Итого
+  &__total
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+
+    letter-spacing: 0.05em
+    font-size: 14px
+    +tt(bold)
+    &-num
+      +tt(ex)
+  &__input
+    &--promocode
+      margin-top: 48px
+      .input__field
+        padding-right: 24px
+
+    // Сумма, скидка
+    &--result
+      pointer-events: auto
+      user-select: unset
+      padding-bottom: 24px
+      .input__field, .input__label
+        color: transparent
+        user-select: none
+        pointer-events: none
+        &::selection
+          color: transparent
+          user-select: none
+          pointer-events: none
+
+
+      // Текст поверх инпута, например: Сумма --- X рублей
+      .input__result
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        padding-bottom: 12px
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+
+        // opacity: 0.5
+        color: $black
+        letter-spacing: 0.05em
+        font-size: 14px
+        +tt(md)
+      .input__label::before
+        background: rgba($black, 0.1)
+
+.clear-promocode
+  +unbtn
+  opacity: 0.5
+  position: absolute
+  top: 0
+  right: 0
+  width: 24px
+  height: 24px
+
+  display: none
+  svg
+    width: 12px
+    height: 12px
+
+// Состояния товаров в корзине
+.cart__product
+
+  // Один товар - прячем показатели кол-ва
+  &--once
+    .cart__amount-icon, .cart__amount
+      display: none
+
+  // Удален - полупрозрачные недоступные элементы.
+  // Показываем кнопку "Восстановить"
+  .cart
+    &__img,
+    &__code,
+    &__name,
+    &__size,
+    &__result,
+    &__amount-icon
+      transition: 0.4s ease-in-out
+  &--is-removed
+    .cart__remove
+      display: none
+    .cart__recovery
+      display: block
+    .cart
+      &__img,
+      &__code,
+      &__name,
+      &__size,
+      &__result
+        opacity: 0.3
+        pointer-events: none
+        user-select: none
+      &__amount-icon
+        background: #e8e8e8
+        pointer-events: none
+        user-select: none
+    

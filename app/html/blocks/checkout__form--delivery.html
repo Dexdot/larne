@@ -1,0 +1,173 @@
+<form class="checkout__form checkout__form--delivery">
+  <div class="checkout__content">
+    @include('../blocks/checkout__top.html')
+    <span class="checkout__title">Условия доставки</span>
+    <p class="checkout__subtitle">Выберите удобную форму доставки</p>
+
+    <div class="delivery-tabs">
+      <button class="delivery-tab delivery-tab--courier delivery-tab--is-active" type="button">Курьер</button>
+      <button class="delivery-tab delivery-tab--myself" type="button">Самовывоз</button>
+    </div>
+
+    <div class="delivery">
+
+      <!-- Курьер -->
+      <div class="delivery__courier">
+
+        <ul class="delivery__list">
+          <li class="delivery__list-item">
+            Доставка в Центральном районе
+            <span class="delivery__price">
+              <span class="delivery__price-num">200</span>
+              &#8381;
+            </span>
+          </li>
+          <li class="delivery__list-item">
+            В пределах КАД
+            <span class="delivery__price">
+              <span class="delivery__price-num">400</span>
+              &#8381;
+            </span>
+          </li>
+          <li class="delivery__list-item">
+            Доставка в Ленобласть
+            <span class="delivery__price">
+              <span class="delivery__price-num">800</span>
+              &#8381;
+            </span>
+          </li>
+        </ul>
+
+        <div class="delivery__addresses">
+          <button class="info-card address address--is-active" type="button">
+            <span class="info-card__title address__name">Анастасия</span>
+            <span class="info-card__subtitle address__city">192288, Санкт-Петербург</span>
+            <span class="info-card__subtitle address__street">ул. Маяковская, д. 30, кв. 21</span>
+            @include('../svg/daw.html')
+          </button>
+          <button class="info-card address" type="button">
+            <span class="info-card__title address__name">Анастасия</span>
+            <span class="info-card__subtitle address__city">228 Park Ave S</span>
+            <span class="info-card__subtitle address__street">New York, NY 10003-1502</span>
+            @include('../svg/daw.html')
+          </button>
+        </div>
+
+        <button class="delivery__add-address" type="button">Добавить новый адрес</button>
+
+        <fieldset class="delivery__new">
+          <div class="input">
+            <label class="input__label">
+              <input class="input__field" type="text" required placeholder="Имя">
+            </label>
+            <span class="input__tip input__tip--danger">Заполните поле</span>
+          </div>
+          <div class="delivery__new-address">
+            <div class="input delivery__new-input">
+              <label class="input__label">
+                <input class="input__field" type="text" required placeholder="Введите адрес">
+              </label>
+              <span class="input__tip input__tip--danger">Заполните поле</span>
+              @include('../svg/daw.html')
+            </div>
+            <div class="delivery__new-address-info">
+              <div class="input input--readonly">
+                <label class="input__label">
+                  <input class="input__field" type="text" required value="Санкт-Петербург">
+                </label>
+                <span class="input__tip input__tip--danger">Заполните поле</span>
+              </div>
+              <div class="input input--readonly">
+                <label class="input__label">
+                  <input class="input__field" type="text" required value="Маяковского">
+                </label>
+                <span class="input__tip input__tip--danger">Заполните поле</span>
+              </div>
+              <div class="input-row">
+                <div class="input input--readonly">
+                  <label class="input__label">
+                    <input class="input__field" type="text" required value="13">
+                  </label>
+                  <span class="input__tip input__tip--danger">Заполните поле</span>
+                  <span class="input__title">Дом</span>
+                </div>
+                <div class="input input--readonly">
+                  <label class="input__label">
+                    <input class="input__field" type="text" required placeholder="Корпус">
+                  </label>
+                  <span class="input__tip input__tip--danger">Заполните поле</span>
+                </div>
+              </div>
+              <div class="input-row">
+                <div class="input input--readonly">
+                  <label class="input__label">
+                    <input class="input__field" type="text" required value="44">
+                  </label>
+                  <span class="input__tip input__tip--danger">Заполните поле</span>
+                  <span class="input__title">Квартира</span>
+                </div>
+                <div class="input input--readonly">
+                  <label class="input__label">
+                    <input class="input__field" type="text" required value="182277">
+                  </label>
+                  <span class="input__tip input__tip--danger">Заполните поле</span>
+                  <span class="input__title">Индекс</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <label class="checkbox delivery__sms">
+          <input type="checkbox" class="checkbox__input" required checked> Хочу получать SMS-уведомления @include('../svg/daw.html')
+        </label>
+
+      </div>
+      <!-- ./Курьер -->
+
+      <!-- Самовывоз -->
+      <div class="delivery__myself">
+        <ul class="delivery__list">
+          <li class="delivery__list-item">
+            Самовывоз из шоурума в Петербурге
+            <span class="delivery__price">
+              <span class="delivery__price-num">Бесплатно</span>
+            </span>
+          </li>
+        </ul>
+        <div class="delivery-about">
+
+          <span class="delivery-about__title">Шоурум Larne</span>
+
+          <div class="delivery-about__paragraph">
+            <span class="delivery-about__subtitle">Адрес</span>
+            <p class="delivery-about__text">Санкт-Петербург, ул. Марата, д.12, пом. 11Н</p>
+            <button class="delivery__show-map" type="button">Показать на карте</button>
+            <button class="delivery__hide-map" type="button">Скрыть карту</button>
+            <div class="delivery__map map"></div>
+          </div>
+
+          <div class="delivery-about__paragraph">
+            <span class="delivery-about__subtitle">Время работы</span>
+            <p class="delivery-about__text">Вт-Сб, 13:00 — 21:00</p>
+          </div>
+
+          <div class="delivery-about__paragraph">
+            <span class="delivery-about__subtitle">Как нас найти</span>
+            <p class="delivery-about__text">
+              Cтеклянная дверь около кирпичной галереи, рядом на стене большая синяя цифра 9 и таблички с названиями офисов, сразу за дверью
+              яркий лифт в стиле Мондриана. Рядом Design place, Fassbinder и Edward's pub.
+            </p>
+          </div>
+
+        </div>
+      </div>
+      <!-- ./Самовывоз -->
+
+    </div>
+
+  </div>
+  <button class="btn btn--half checkout__btn checkout__btn--delivery checkout__btn--left" type="button">Отмена</button>
+  <button class="btn btn--half checkout__btn checkout__btn--delivery checkout__btn--right" type="button">Сохранить</button>
+  <button class="btn btn--lg checkout__btn checkout__btn--delivery checkout__btn--send" type="submit">Далее</button>
+</form>

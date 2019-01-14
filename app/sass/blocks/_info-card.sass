@@ -1,0 +1,72 @@
+// Серая карточка
+
+// <button class="info-card info-card--empty">
+// 	<span class="info-card__title">Mastercard</span>
+// 	<span class="info-card__subtitle">**** **** **** 8800</span>
+// 	<span class="info-card__subtitle">Anastasia Medinskaya</span>
+// 	@include('../svg/daw.html')
+// </button>
+  
+.info-card
+  +unbtn
+  position: relative
+  padding: 34px 46px 34px 40px
+  width: 100%
+
+  background: #f8f8f8
+  font-size: 14px
+  line-height: 1.7
+
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  justify-content: flex-start
+
+  transition: $trs
+  @media (min-width: 1900px)
+    font-size: 16px
+  @media (max-width: 500px)
+    padding: 34px 56px 34px 24px
+
+  overflow: hidden
+  &::before
+    content: ''
+    width: 2px
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    background: #000
+    transition: $trs-bgs-fast
+    transform: translateY(-100%)
+  &:hover
+    background: #eeeeee
+    // &::before
+    //   transform: translateY(0)
+  &--empty
+    padding: 45px 53px 45px 40px
+    @media (max-width: 500px)
+      padding: 45px 53px 45px 24px
+  &__title
+    +tt(bold)
+    text-align: left
+  &__subtitle
+    +tt(md)
+    text-align: left
+  svg
+    position: absolute
+    right: 32px
+    top: 50%
+    transform: translateY(-50%)
+    &.i-daw
+      width: 18px
+      height: 18px
+      stroke: $black
+    &.i-arrow-down
+      opacity: 0.4
+      width: 16px
+    &.i-plus
+      width: 21px
+      height: 21px
+    @media (max-width: 500px)
+      right: 24px

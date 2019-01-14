@@ -1,0 +1,146 @@
+// <div class="input">
+//   <label class="input__label">
+//     <input class="input__field" type="text" required placeholder="Email">
+//   </label>
+//   <span class="input__tip input__tip--basic">Успешно</span>
+//   <span class="input__tip input__tip--danger">Заполните поле</span>
+// </div>
+
+
+.input
+  &__label
+    position: relative
+    display: block
+    &::before
+      content: ''
+      display: block
+      width: 100%
+      height: 2px
+      position: absolute
+      bottom: 0
+      background: rgba($black, 0.1)
+    &::after
+      content: ''
+      display: block
+      width: 100%
+      height: 2px
+      position: absolute
+      bottom: 0
+      background: #000
+      transition: 0.45s cubic-bezier(0.23, 1, 0.32, 1)
+      transform-origin: 50% 50%
+      transform: scaleX(0)
+    
+    // Подчеркиваем при фокусе
+    &--is-focused::after
+      transform: scaleX(1)
+    &--is-filled
+      .input__field
+        outline: none
+        color: $black
+
+    // Инпут-рассылка
+    &--mailing
+      .input__field
+        text-align: center
+        text-align-last: center
+        text-transform: uppercase
+        letter-spacing: 0.1em
+        font-size: 10px
+        padding-bottom: 16px
+        padding-right: 16px
+        color: $black
+        &::placeholder
+          color: $black
+    
+    // Прячем плейсхолдер
+    &--no-placeholder .input__field::placeholder
+      color: transparent
+    
+    // Красное подчеркивание
+    &--danger::after
+      background: $red
+
+.input
+  position: relative
+  padding-bottom: 40px
+  &__field
+    letter-spacing: 0.05em
+    font-size: 14px
+    +tt(bold)
+
+    +unbtn
+    width: 100%
+    height: 100%
+
+    padding-bottom: 12px
+    padding-right: 12px
+    
+    color: rgba($black, 0.5)
+    &::placeholder
+      color: rgba($black, 0.5)
+    &:focus
+      outline: none
+      color: $black
+  &__tip
+    letter-spacing: 0.05em
+    font-size: 12px
+    color: $black
+    +tt(md)
+    position: absolute
+    left: 0
+    transform: translateY(10px)
+    display: none
+    &--danger
+      color: $red
+  &__btn
+    width: 16px
+    height: 16px
+    bottom: 16px
+    right: 0
+    position: absolute
+    transform: translateY(2px)
+    +unbtn
+
+    opacity: 0
+    pointer-events: none
+    &--is-visible
+      pointer-events: auto
+      opacity: 1
+    .i-arrow-mailing
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+  &__title
+    position: absolute
+    top: 0
+    left: 0
+    transform: translateY(calc(-75% - 8px))
+
+    opacity: 0.4
+    +tt(bold)
+    font-size: 12px
+    letter-spacing: 0.05em
+  &-row
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    min-height: 70px
+    .input
+      width: calc(50% - 8px)
+  &--readonly
+    pointer-events: none
+    user-select: none
+
+    &:not(.cart__input--result) .input__label--is-filled .input__field
+      color: rgba(48,48,48,.5)
+  &--lock
+    .input__field
+      padding-right: 32px
+
+
+
+

@@ -1,0 +1,70 @@
+<div class="profile__block profile__block--profile">
+
+  <!-- profile__content -->
+  <div class="profile__content">
+    <h2 class="profile__title">Профиль</h2>
+    <p class="profile__text">
+      Здесь вы можете редактировать личные данные:
+      <br> имя, фамилию, контакты и дату рождения
+    </p>
+    <button class="info-card" data-profile="profile">
+      <span class="info-card__title">Василиса Кириешко</span>
+      <span class="info-card__subtitle">kiriewko@gmail.com</span>
+      <span class="info-card__subtitle">+7 911 756-32-45</span>
+      @include('../svg/arrow-down.html')
+    </button>
+  </div>
+  <!-- ./profile__content -->
+
+  <!-- profile-form -->
+  <div class="profile-form">
+    <button class="profile-form__overlay"></button>
+    <form class="profile-form__form">
+      <button class="profile-form__close" type="button">
+        @include('../svg/arrow-circle.html')
+      </button>
+      <div class="profile-form__content">
+        <span class="profile-form__title">Обновить профиль</span>
+
+        <div class="input">
+          <label class="input__label">
+            <input class="input__field" type="text" required placeholder="Имя" value="Василиса">
+          </label>
+          <span class="input__tip input__tip--danger">Заполните поле</span>
+        </div>
+
+        <div class="input">
+          <label class="input__label">
+            <input class="input__field" type="text" required placeholder="Фамилия" value="Кириешко">
+          </label>
+          <span class="input__tip input__tip--danger">Заполните поле</span>
+        </div>
+
+        <div class="input">
+          <label class="input__label">
+            <input class="input__field mask-date" type="text" required placeholder="Дата рождения" value="03.05.1994">
+          </label>
+          <span class="input__tip input__tip--danger">Заполните поле</span>
+        </div>
+
+        <div class="input">
+          <label class="input__label">
+            <input class="input__field" type="email" required placeholder="Email" value="kiriewko@gmail.com">
+          </label>
+          <span class="input__tip input__tip--danger">Заполните поле</span>
+        </div>
+
+        <div class="input">
+          <label class="input__label">
+            <input class="input__field mask-phone" type="tel" required placeholder="Телефон" value="+79117563245">
+          </label>
+          <span class="input__tip input__tip--danger">Заполните поле</span>
+        </div>
+
+      </div>
+      <button class="btn btn--lg profile-form__btn profile-form__btn--profile" type="submit">Сохранить</button>
+    </form>
+  </div>
+  <!-- ./profile-form -->
+
+</div>

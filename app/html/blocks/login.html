@@ -1,0 +1,55 @@
+<div class="login">
+  <button class="login__overlay"></button>
+  <form class="login__form">
+
+    <!-- login__content -->
+    <div class="login__content">
+      <button class="login__close" type="button">
+        @include('../svg/arrow-circle.html')
+      </button>
+      <span class="login__title">Добро пожаловать!</span>
+      <p class="login__subtitle">Введите логин и пароль, чтобы войти в аккаунт</p>
+
+      <div class="input login__input">
+        <label class="input__label">
+          <input class="input__field" type="text" required placeholder="Логин">
+        </label>
+        <span class="input__tip input__tip--danger">Заполните поле</span>
+      </div>
+
+      <div class="input login__input">
+        <label class="input__label">
+          <input class="input__field" type="password" required placeholder="Пароль">
+        </label>
+        <span class="input__tip input__tip--danger">Заполните поле</span>
+      </div>
+
+      <div class="login__signup-tip">
+        Нет аккаунта?
+        <button class="login__signup" type="button">Зарегистрироваться</button>
+      </div>
+
+      <button class="login__recovery" type="button">Забыли пароль?</button>
+
+      <div class="social">
+        <span class="social__tip">Быстрый вход:</span>
+        <button class="social__btn social__btn--fb" type="button">
+          @include('../svg/fb.html')
+        </button>
+        <button class="social__btn social__btn--vk" type="button">
+          @include('../svg/vk.html')
+        </button>
+        <button class="social__btn social__btn--twitter" type="button">
+          @include('../svg/twitter.html')
+        </button>
+        <button class="social__btn social__btn--more" type="button">
+          @include('../svg/more.html')
+        </button>
+      </div>
+
+    </div>
+    <!-- ./login__content -->
+
+    <button class="btn btn--lg login__btn" type="submit">Войти</button>
+  </form>
+</div>

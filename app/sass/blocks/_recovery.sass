@@ -1,0 +1,159 @@
+.recovery
+  position: fixed
+  top: 0
+  right: 0
+  width: 100vw
+  height: 100vh
+  z-index: 3
+
+  transition: $trs-forhims-6
+  pointer-events: none
+  &--is-visible
+    pointer-events: auto
+    .recovery
+      &__form
+        transform: translateX(0)
+      &__overlay
+        opacity: 1
+        pointer-events: auto
+  &__overlay
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    +unbtn
+    cursor: auto
+    background: $overlay-bg
+
+    transition: $trs-forhims-6
+    opacity: 0
+    pointer-events: none
+  &__form
+    padding-bottom: 64px
+    position: fixed
+    top: 0
+    right: 0
+    z-index: 9999
+    background: #ffffff
+    width: 50vw
+    height: 100%
+    margin-left: auto
+    transform: translateX(51vw)
+    transition: $trs-forhims-6
+
+    @media (max-width: 1100px)
+      width: 70vw
+      transform: translateX(71vw)
+    @media (max-width: 700px)
+      width: 100vw
+      transform: translateX(101vw)
+  &__close
+    +unbtn
+    // position: absolute
+    // top: 3.7vw
+    // top: 56px
+    // left: 3.7vw
+
+    position: absolute
+    top: 56px
+    right: calc(46.3vw - 32px)
+
+    width: 32px
+    height: 32px
+    border-radius: 50%
+
+    @media (max-width: 1100px)
+      right: calc(66.3vw - 32px)
+    @media (max-width: 700px)
+      right: auto
+      left: 5.5vw
+    @media (max-width: 500px)
+      top: 16px
+  &__content
+    position: relative
+
+    padding-top: 9.5em
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    +scrollbar
+    .social
+      min-height: 32px
+      margin-top: 48px
+      margin-bottom: 64px
+      @media (min-height: 1100px)
+        position: absolute
+        bottom: 168px
+        left: 0
+        right: 0
+        margin: 0
+    @media (min-height: 1100px)
+      padding-top: 28%
+    @media (max-width: 500px)
+      padding-top: 7.5em
+
+  &__title
+    font-size: 20px
+    +tt(bold)
+    line-height: 1
+    margin-bottom: 10px
+    display: block
+    letter-spacing: 0.05em
+    @media (min-width: 2200px)
+      font-size: 22px
+    @media (max-width: 500px)
+      font-size: 20px
+  &__subtitle
+    +tt(md)
+    font-size: 12px
+    letter-spacing: 0.05em
+
+    opacity: 0.4
+    margin-bottom: 48px
+    @media (min-width: 2200px)
+      font-size: 14px
+    @media (max-width: 500px)
+      text-align: center
+      padding-left: 13%
+      padding-right: 13%
+  &__input
+    max-width: 54%
+    width: 100%
+    min-width: 180px
+    padding-bottom: 36px
+    @media (max-width: 500px)
+      max-width: 74%
+  &__signup
+    +tt(bold)
+    color: $black
+    +unbtn
+    +underline
+    &::after
+      bottom: -4px
+    &:visited, &:active, &:focus
+      color: $black
+    &-tip
+      +tt(reg)
+      font-size: 14px
+      margin-top: 24px
+      margin-bottom: 16px
+  &__recovery
+    font-size: 14px
+    +tt(bold)
+    color: $black
+    +unbtn
+    +underline
+    &::after
+      bottom: -4px
+    &:visited, &:active, &:focus
+      color: $black
+  &__btn
+    position: absolute
+    bottom: 0
+    left: 0
+
+
+

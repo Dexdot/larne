@@ -1,0 +1,281 @@
+<div class="profile__block profile__block--orders">
+
+  <!-- profile__content -->
+  <div class="profile__content">
+    <h2 class="profile__title">
+      Заказы
+      <span class="profile__title-num">04</span>
+    </h2>
+    <p class="profile__text">
+      Здесь можно отслеживать статус текущих заказов,
+      <br>а так же изучить историю всех покупок и подробную информацию по каждой из них.
+    </p>
+    <button class="info-card" data-profile="orders" id="someUniqId-3">
+      <span class="info-card__title">Заказ №100450 от 14/03/2018</span>
+      <span class="info-card__subtitle">Отправлен</span>
+      @include('../svg/arrow-down.html')
+    </button>
+    <h3 class="profile__subtitle">Выполненные</h3>
+    <button class="info-card" data-profile="orders" id="someUniqId-4">
+      <span class="info-card__title">Заказ №100450 от 14/03/2018</span>
+      <span class="info-card__subtitle">Получен</span>
+      @include('../svg/arrow-down.html')
+    </button>
+  </div>
+  <!-- ./profile__content -->
+
+  <!-- profile__content--empty -->
+  <div class="profile__content profile__content--empty">
+    <h2 class="profile__title">
+      Заказы
+      <span class="profile__title-num">00</span>
+    </h2>
+    <p class="profile__text">
+      Здесь можно отслеживать статус текущих заказов,
+      <br>а так же изучить историю всех покупок и подробную информацию по каждой из них.
+    </p>
+    <button class="info-card" data-profile="orders">
+      <span class="info-card__title">Ваш первый заказ</span>
+      <span class="info-card__subtitle">Ожидает покупки</span>
+      @include('../svg/arrow-down.html')
+    </button>
+  </div>
+  <!-- ./profile__content--empty -->
+
+  <!-- profile-form -->
+  <div class="profile-form" data-form="someUniqId-3">
+    <button class="profile-form__overlay"></button>
+    <form class="profile-form__form">
+      <button class="profile-form__close" type="button">
+        @include('../svg/arrow-circle.html')
+      </button>
+      <div class="profile-form__content">
+        <span class="profile-form__title">Описание заказа</span>
+
+        <div class="cart__products">
+          <div class="cart__product">
+            <div class="cart__img-wrap">
+              <img class="cart__img" src="img/cart-img.jpg" alt="Платье с пышной юбкой с геометричным принтом">
+              <span class="cart__amount-icon">2</span>
+            </div>
+            <div class="cart__info">
+              <div class="cart__info-block">
+                <span class="cart__name">Платье с пышной юбкой с геометричным принтом</span>
+                <span class="cart__code">М01/737</span>
+                <div class="cart__footer">
+                  <span class="cart__size">Размеры XS, S</span>
+                </div>
+              </div>
+              <div class="cart__result">
+                <span class="cart__price">
+                  <span class="cart__price-num">13 000</span>
+                  &#8381;
+                </span>
+                <span class="cart__amount">
+                  <span class="cart__amount-num">2</span> x
+                  <span class="cart__amount-price">6500</span>
+                  &#8381;</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <fieldset class="cart__group">
+          <div class="input input--readonly cart__input--result">
+            <label class="input__label">
+              <input class="input__field" type="text" required readonly value="16400">
+            </label>
+            <div class="input__result">
+              <span class="input__result-name">Сумма</span>
+              <span>
+                <span class="input__result-value">16400</span>&#8381;</span>
+            </div>
+          </div>
+
+          <div class="input input--readonly cart__input--result">
+            <label class="input__label">
+              <input class="input__field" type="text" required readonly value="16400">
+            </label>
+            <div class="input__result">
+              <span class="input__result-name">Доставка</span>
+              <span>
+                <span class="input__result-value">800</span>&#8381;</span>
+            </div>
+          </div>
+
+          <div class="input input--readonly cart__input--result">
+            <label class="input__label">
+              <input class="input__field" type="text" required readonly value="1100">
+            </label>
+            <div class="input__result">
+              <span class="input__result-name">Скидка</span>
+              <span>
+                <span class="input__result-value">1100</span>&#8381;</span>
+            </div>
+          </div>
+
+          <p class="cart__total">
+            <span>Итого</span>
+            <span>
+              <span class="cart__total-num">15300</span>
+              &#8381;</span>
+          </p>
+        </fieldset>
+
+        <div class="profile__orders">
+          <div class="profile__order">
+            <span class="profile__order-title">Условия доставки</span>
+            <ul class="profile__order-list">
+              <li class="profile__order-list-item">Курьер, 18/04/2018 с 12:00 до 14:00</li>
+              <li class="profile__order-list-item">192288, Санкт-Петербург</li>
+              <li class="profile__order-list-item">ул. Маяковская, д. 30, кв. 21</li>
+            </ul>
+          </div>
+          <div class="profile__order">
+            <span class="profile__order-title">Способ оплаты</span>
+            <ul class="profile__order-list">
+              <li class="profile__order-list-item">Банковская карта</li>
+              <li class="profile__order-list-item">Mastercard **** **** **** 8800</li>
+            </ul>
+          </div>
+        </div>
+
+
+      </div>
+      <button class="btn btn--lg profile-form__btn profile-form__btn--orders" type="submit">Повторить заказ</button>
+    </form>
+  </div>
+  <!-- ./profile-form -->
+
+  <!-- profile-form -->
+  <div class="profile-form" data-form="someUniqId-4">
+    <button class="profile-form__overlay"></button>
+    <form class="profile-form__form">
+      <button class="profile-form__close" type="button">
+        @include('../svg/arrow-circle.html')
+      </button>
+      <div class="profile-form__content">
+        <span class="profile-form__title">Описание заказа</span>
+
+        <div class="cart__products">
+          <div class="cart__product cart__product--once">
+            <div class="cart__img-wrap">
+              <img class="cart__img" src="img/cart-img.jpg" alt="Голубое платье с пышной юбкой">
+              <span class="cart__amount-icon"></span>
+            </div>
+            <div class="cart__info">
+              <div class="cart__info-block">
+                <span class="cart__name">Голубое платье с пышной юбкой</span>
+                <span class="cart__code">М01/737</span>
+                <div class="cart__footer">
+                  <span class="cart__size">Размер M</span>
+                </div>
+              </div>
+              <div class="cart__result">
+                <span class="cart__price">
+                  <span class="cart__price-num">6500</span>
+                  &#8381;
+                </span>
+                <span class="cart__amount"></span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="cart__product">
+            <div class="cart__img-wrap">
+              <img class="cart__img" src="img/cart-img.jpg" alt="Платье с пышной юбкой с геометричным принтом">
+              <span class="cart__amount-icon">2</span>
+            </div>
+            <div class="cart__info">
+              <div class="cart__info-block">
+                <span class="cart__name">Платье с пышной юбкой с геометричным принтом</span>
+                <span class="cart__code">М01/737</span>
+                <div class="cart__footer">
+                  <span class="cart__size">Размеры XS, S</span>
+                </div>
+              </div>
+              <div class="cart__result">
+                <span class="cart__price">
+                  <span class="cart__price-num">13 000</span>
+                  &#8381;
+                </span>
+                <span class="cart__amount">
+                  <span class="cart__amount-num">2</span> x
+                  <span class="cart__amount-price">6500</span>
+                  &#8381;</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <fieldset class="cart__group">
+          <div class="input input--readonly cart__input--result">
+            <label class="input__label">
+              <input class="input__field" type="text" required readonly value="16400">
+            </label>
+            <div class="input__result">
+              <span class="input__result-name">Сумма</span>
+              <span>
+                <span class="input__result-value">16400</span>&#8381;</span>
+            </div>
+          </div>
+
+          <div class="input input--readonly cart__input--result">
+            <label class="input__label">
+              <input class="input__field" type="text" required readonly value="16400">
+            </label>
+            <div class="input__result">
+              <span class="input__result-name">Доставка</span>
+              <span>
+                <span class="input__result-value">800</span>&#8381;</span>
+            </div>
+          </div>
+
+          <div class="input input--readonly cart__input--result">
+            <label class="input__label">
+              <input class="input__field" type="text" required readonly value="1100">
+            </label>
+            <div class="input__result">
+              <span class="input__result-name">Скидка</span>
+              <span>
+                <span class="input__result-value">1100</span>&#8381;</span>
+            </div>
+          </div>
+
+          <p class="cart__total">
+            <span>Итого</span>
+            <span>
+              <span class="cart__total-num">15300</span>
+              &#8381;</span>
+          </p>
+        </fieldset>
+
+        <div class="profile__orders">
+          <div class="profile__order">
+            <span class="profile__order-title">Условия доставки</span>
+            <ul class="profile__order-list">
+              <li class="profile__order-list-item">Курьер, 18/04/2018 с 12:00 до 14:00</li>
+              <li class="profile__order-list-item">192288, Санкт-Петербург</li>
+              <li class="profile__order-list-item">ул. Маяковская, д. 30, кв. 21</li>
+            </ul>
+          </div>
+          <div class="profile__order">
+            <span class="profile__order-title">Способ оплаты</span>
+            <ul class="profile__order-list">
+              <li class="profile__order-list-item">Банковская карта</li>
+              <li class="profile__order-list-item">Mastercard **** **** **** 8800</li>
+            </ul>
+          </div>
+        </div>
+
+
+      </div>
+      <button class="btn btn--lg profile-form__btn profile-form__btn--orders" type="submit">Повторить заказ</button>
+    </form>
+  </div>
+  <!-- ./profile-form -->
+
+</div>

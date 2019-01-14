@@ -1,0 +1,235 @@
+.header
+  position: relative
+  &__inner
+    padding-top: 48px
+    display: flex
+    justify-content: space-between
+    @media (max-width: 480px)
+      padding-top: 24px
+  &__left
+    // width: 50%
+    display: flex
+    align-items: stretch
+    // justify-content: space-between
+    justify-content: flex-start
+  &__right
+    // width: 50%
+    flex: 1
+    display: flex
+    align-items: stretch
+    justify-content: space-between
+    padding-left: 3.7em
+    @media (max-width: 990px)
+      flex: unset
+      padding-left: 0
+      // padding-right: 44px
+      padding-right: 64px
+  &__logo
+    max-width: 7.5em
+    height: 1.5em
+    display: block
+    z-index: 1
+    .i-logo
+      width: 100%
+      height: 100%
+      @media (max-width: 480px)
+        width: 108px
+        height: auto
+  &__nav
+    padding-left: 7em
+    @media (max-width: 1120px)
+      padding-left: 5em
+  &__list
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+    height: 100%
+    &-item
+      height: 100%
+      &:first-child
+        .header__link
+          margin-left: 0
+          &::after
+            display: none
+              
+  &__link
+    font-size: 11px
+    color: $black
+    +tt(bold)
+    height: 100%
+    display: inline-block
+    vertical-align: top
+    margin-left: 2.90em
+    letter-spacing: 0.05em
+    text-transform: uppercase
+    +underline
+    &::after
+      bottom: -4px
+
+  &__search
+    width: 16px
+    height: 16px
+    display: flex
+    align-items: center
+    justify-content: center
+    +unbtn
+
+    transition: $trs
+    &:hover
+      opacity: 0.5
+  &__phone
+    font-size: 12px
+    color: $black
+    +tt(bold)
+    margin-left: auto
+    margin-right: 8.5em
+    letter-spacing: 0.05em
+    @media (max-width: 1120px)
+      margin-right: 32px
+
+    transition: $trs
+    &:hover
+      opacity: 0.5
+  &__login
+    letter-spacing: 0.05em
+    text-transform: uppercase
+    font-size: 10px
+    +tt(bold)
+    +unbtn
+    &-wrap
+      display: flex
+      align-items: center
+      transform: translateY(-6px)
+      @media (max-width: 990px)
+        transform: translateY(-2px)
+    
+    transition: $trs
+    &:hover
+      opacity: 0.5
+  &__name
+    @extend .header__login
+    color: $black
+    &:focus,
+    &:visited,
+    &:active
+      color: $black
+  &__cart
+    position: relative
+    margin-left: 18px
+    width: 22px
+    height: 24px
+    +unbtn
+    &-num
+      font-size: 8px
+      +tt(bold)
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+    .i-hexagon
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+
+      transition: $trs
+    .i-hexagon-fill
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 24px
+      height: 24px
+      transform: translate(-50%, -50%) rotate(90deg)
+
+      transition: $trs
+      opacity: 0
+    &--fill
+      .header__cart-num
+        color: #fff
+      .i-hexagon
+        opacity: 0
+        &-fill
+          opacity: 1
+    @media (max-width: 990px)
+      margin-left: 0
+
+  &--catalog-drop
+    transition: 0.35s ease-out
+    background: #fff
+    .header__search
+      opacity: 0.3
+    .header__link
+      opacity: 0.3
+      &--catalog
+        opacity: 1
+
+
+  &--mob
+    transition: 0.35s ease-out
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    z-index: 1
+    .i-logo, .i-hexagon
+      fill: $black
+    .header__cart-num
+      color: $black
+    .header__inner
+      padding-top: 24px
+      padding-bottom: 24px
+    .hamburger
+      top: 24px
+    
+    display: none
+
+    transform: translateY(-100%)
+    &.is-active
+      transform: translateY(0)
+
+    background: #fff
+    &.transparent
+      background: transparent
+    &.dark
+      .i-logo, .i-hexagon
+        fill: $black
+      .header__cart-num
+        color: $black
+      .hamburger-inner
+        &,
+        &::before,
+        &::after
+          background: $black
+    &.light
+      .i-logo, .i-hexagon
+        fill: #fff
+      .header__cart-num
+        color: #fff
+      .hamburger-inner
+        &,
+        &::before,
+        &::after
+          background: #fff
+
+.on-products .header--catalog-drop
+  background: $beige !important
+  
+.mob .header--mob
+  @media (max-width: 990px)
+    display: block
+  
+.mob section .header
+  @media (max-width: 990px)
+    display: none
+
+.header
+  .header
+    &__phone, &__search, &__login, &__nav
+      @media (max-width: 990px)
+        display: none
+
+    
+
+
+
+  

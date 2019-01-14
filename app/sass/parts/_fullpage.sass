@@ -1,0 +1,14 @@
+// Поэкранные слайды
+// JS вешает .fullpage, применяются стили и инициализируются скрипты
+  
+.fullpage
+  section
+    display: none
+    &.is-visible
+      display: block
+    &#instagram, &#products
+      display: none
+      &.is-visible
+        display: flex
+
+

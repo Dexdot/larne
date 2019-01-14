@@ -1,0 +1,55 @@
+.section-header
+  display: flex
+  flex-direction: row
+  align-items: flex-start
+  justify-content: flex-start
+  &__icons
+    display: flex
+    align-items: center
+    flex-direction: row
+  &__line
+    width: 1px
+    height: 16px
+    background: rgba(#000, 0.1)
+    margin-left: 24px
+    margin-right: 20px
+    @media (max-width: 480px)
+      margin-right: 16px
+      margin-left: 16px
+  &__title
+    +tt(ex)
+    font-size: 30px
+    line-height: 1
+    letter-spacing: 0.05em
+    margin-bottom: 8px
+
+    // line-height fix
+    margin-top: -4px
+    @media (min-width: 2200px)
+      font-size: 36px
+    @media (max-width: 480px)
+      font-size: 24px
+      letter-spacing: 0.025em
+  &__link
+    color: rgba($black, 0.4)
+    +tt(reg)
+    font-size: 14px
+    &:hover .i-arrow
+      transform: translateX(8px)
+    .i-arrow
+      transition: transform .6s cubic-bezier(.165,.84,.44,1)
+      margin-left: 16px
+  
+.section-header__hexagon
+  width: 22px
+  height: 24px
+  position: relative
+  .i-hexagon, .i-hexagon-fill
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    &:nth-child(1)
+      opacity: 0.1
+    &:nth-child(2)
+      transform: translate(-50%, -50%) rotate(90deg)

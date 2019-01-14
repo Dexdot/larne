@@ -1,0 +1,271 @@
+$item-height: 31.8vw
+$item-lg-height: $item-height * 2
+
+.grid-sizer
+  width: 25%
+  @media (max-width: 750px)
+    width: 50%
+
+.catalog-item
+  padding-left: 28px
+  min-width: 25%
+  width: 25%
+
+  margin-bottom: 48px
+
+  @media (max-width: 750px)
+    display: flex
+    flex-direction: column
+    min-width: 50%
+    width: 50%
+  @media (max-width: 480px)
+    padding-left: 16px
+    margin-bottom: 40px
+
+  &--banner
+    min-width: 50%
+    width: 50%
+
+    .catalog-item
+
+      &__info
+        justify-content: center
+        @media (max-width: 960px)
+          align-items: center
+          justify-content: flex-start
+
+      &__name
+        letter-spacing: 0.075em
+        text-transform: none
+        font-size: 14px
+        +tt(bold)
+
+    @media (max-width: 750px)
+      min-width: 100%
+      width: 100%
+
+  &--lg
+    width: 50%
+    @media (max-width: 750px)
+      min-width: 100%
+      width: 100%
+    .catalog-item__inner
+      padding-top: calc(#{$item-lg-height} + 1.5em + 36px + 48px)
+      @media (max-width: 960px)
+        padding-top: calc(#{$item-lg-height} + 1.5em + 72px + 48px)
+      @media (max-width: 750px)
+        padding-top: calc(65vw * 2 + 1.5em + 72px + 48px)
+      @media (max-width: 480px)
+        padding-top: calc(65vw * 2 + 1.5em + 72px + 40px)
+
+  &__inner
+    padding-top: $item-height
+    position: relative
+    overflow: hidden
+
+    @media (max-width: 750px)
+      padding-top: 65vw
+
+  &__img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    pointer-events: none
+    transition: $trs-img
+
+    position: absolute
+    top: 0
+    left: 0
+
+  &__img-wrap
+    overflow: hidden
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+
+  &__info
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+    justify-content: space-between
+    margin-top: 1.5em
+    height: 36px
+
+    @media (max-width: 960px)
+      flex-direction: column
+      justify-content: flex-start
+      height: 72px
+    @media (max-width: 750px)
+      height: auto
+      flex-grow: 1
+
+  &__name
+    +tt(md)
+    font-size: 10px
+    text-transform: uppercase
+    line-height: 1.8
+    max-width: 75%
+    letter-spacing: 0.1em
+    color: $black
+
+    &:visited, &:focus, &:active
+      color: $black
+
+    @media (max-width: 960px)
+      max-width: 95%
+      margin-bottom: 20px
+    @media (max-width: 750px)
+      margin-bottom: auto
+
+  &__price
+    +tt(ex)
+    font-size: 14px
+    text-transform: uppercase
+    letter-spacing: 0.05em
+
+    &--old
+      position: relative
+      margin-top: 4px
+      font-size: 10px
+
+      @media (max-width: 960px)
+        margin-left: 8px
+
+      &::before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, 0)
+        width: calc(100% + 8px)
+        height: 1px
+        background: $black
+
+  &__num
+    margin-right: 5px
+
+  &__column
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+
+    @media (max-width: 960px)
+      flex-direction: row
+      align-items: flex-start
+
+  &__sale
+    pointer-events: none
+    user-select: none
+    position: absolute
+    top: 28px
+    left: 28px
+    border: 1px solid #151f2b
+    width: 52px
+    height: 24px
+
+    align-items: center
+    justify-content: center
+
+    +tt(ex)
+    font-size: 10px
+    letter-spacing: 0.1em
+    text-transform: uppercase
+
+    display: none
+    @media (max-width: 960px)
+      top: 20px
+      left: 20px    
+
+  &__fav
+    position: absolute
+    top: 28px
+    right: 28px
+    +unbtn
+    opacity: 0
+    transition: $trs
+
+    @media (max-width: 960px)
+      top: 20px
+      right: 20px
+    @media (max-width: 480px)
+      display: none
+
+    .i-heart
+      transition: $trs
+      opacity: 0.2
+
+    &:hover, &.is-selected
+      .i-heart
+        opacity: 0.6
+
+  &__size
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    background: rgba(#fff, 0.8)
+
+    transform: translateY(100%)
+    transition: 0.4s ease
+    @media (max-width: 855px)
+      display: none
+    @media (max-width: 750px)
+      display: flex
+    @media (max-width: 480px)
+      display: none
+
+    &-btn
+      +unbtn
+      +tt(md)
+      color: $black
+      font-size: 10px
+      letter-spacing: 0.1em
+      text-transform: uppercase
+      display: block
+      margin: 24px 12px
+
+      transition: $trs
+      @media (max-width: 1050px)
+        margin: 16px 8px
+      &:active, &:visited, &:focus
+        color: $black
+      &:hover
+        +tt(ex)
+
+    li:first-child .catalog-item__size-btn
+      margin-left: 0
+    li:last-child .catalog-item__size-btn
+      margin-right: 0
+  
+  // Скидка / Sale
+  &--sale
+
+    .catalog-item
+      &__sale
+        display: flex
+        @media (max-width: 480px)
+          display: none
+
+      &__price
+        color: #ec4a4a
+        &--old
+          color: $black
+  
+  &:hover
+    .catalog-item
+      &__fav
+        opacity: 1
+      &__size
+        transform: translateY(0)
+      &__img
+        transform: scale(1.1) translateZ(0)
+
+

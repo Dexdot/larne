@@ -1,0 +1,60 @@
+// <ul class="accordion-container">
+//   <li class="accordion">
+//     <button class="accordion__btn" type="button">Описание</button>
+//     <div class="accordion__content">
+//       Итс эджэнси
+//     </div>
+//   </li>
+// </ul>
+  
+.accordion
+  display: flex
+  flex-direction: column
+  align-items: stretch
+  justify-content: flex-start
+  &__content
+    max-height: 220px
+    &.filter__column
+      margin-top: 40px
+      overflow-y: auto
+      &::-webkit-scrollbar
+        width: 4px
+        height: 4px
+        background-color: #eaeaea
+        &-thumb
+          background-color: #000
+      
+  &__btn
+    position: relative
+    width: 100%
+    text-align: left
+
+    +tt(bold)
+    font-size: 10px
+    text-transform: uppercase
+    letter-spacing: 0.1em
+    +unbtn
+  .i-arrow-down
+    position: absolute
+    top: -3px
+    right: -5px
+    width: 20px
+    transform: rotate(90deg)
+    transition: $trs
+  &.is-open
+    .i-arrow-down
+      transform: rotate(-90deg)
+
+// Аккордеон для фильтра
+.filter
+  .accordion
+    margin-bottom: 40px
+    &:last-child
+      margin-bottom: 0
+    &-container
+      margin-top: 48px
+      margin-bottom: 48px
+      width: 100%
+
+
+

@@ -1,0 +1,333 @@
+<!-- filter-wrap--desktop -->
+<div class="filter-wrap filter-wrap--desktop">
+  <form class="filter">
+    <div class="filter__container">
+      <fieldset class="filter__column filter__column--color">
+        <legend class="filter__title">Цвет</legend>
+        <label class="filter__checkbox">
+          <input type="checkbox" class="filter__checkbox-input">
+          <span class="filter__checkbox-text">Бежевый</span>
+        </label>
+        <label class="filter__checkbox">
+          <input type="checkbox" class="filter__checkbox-input">
+          <span class="filter__checkbox-text">Белый</span>
+        </label>
+        <label class="filter__checkbox">
+          <input type="checkbox" class="filter__checkbox-input">
+          <span class="filter__checkbox-text">Бирюзовый</span>
+        </label>
+        <label class="filter__checkbox">
+          <input type="checkbox" class="filter__checkbox-input">
+          <span class="filter__checkbox-text">Болотный</span>
+        </label>
+        <button class="filter__btn-more" data-filter="color" type="button">
+          @include('../svg/more.html')
+        </button>
+        <div class="filter__column filter__column--hidden" data-filter="color">
+          <label class="filter__checkbox">
+            <input type="checkbox" class="filter__checkbox-input">
+            <span class="filter__checkbox-text">Бордовый</span>
+          </label>
+          <label class="filter__checkbox">
+            <input type="checkbox" class="filter__checkbox-input">
+            <span class="filter__checkbox-text">Бронза</span>
+          </label>
+          <label class="filter__checkbox">
+            <input type="checkbox" class="filter__checkbox-input">
+            <span class="filter__checkbox-text">Голубой</span>
+          </label>
+          <label class="filter__checkbox">
+            <input type="checkbox" class="filter__checkbox-input">
+            <span class="filter__checkbox-text">Желтый</span>
+          </label>
+        </div>
+      </fieldset>
+      <fieldset class="filter__column">
+        <legend class="filter__title">Размер</legend>
+        <label class="filter__checkbox">
+          <input type="checkbox" class="filter__checkbox-input">
+          <span class="filter__checkbox-text">XS</span>
+        </label>
+        <label class="filter__checkbox">
+          <input type="checkbox" class="filter__checkbox-input">
+          <span class="filter__checkbox-text">S</span>
+        </label>
+        <label class="filter__checkbox">
+          <input type="checkbox" class="filter__checkbox-input">
+          <span class="filter__checkbox-text">M</span>
+        </label>
+        <label class="filter__checkbox">
+          <input type="checkbox" class="filter__checkbox-input">
+          <span class="filter__checkbox-text">L</span>
+        </label>
+        <label class="filter__checkbox">
+          <input type="checkbox" class="filter__checkbox-input">
+          <span class="filter__checkbox-text">XL</span>
+        </label>
+        <label class="filter__checkbox">
+          <input type="checkbox" class="filter__checkbox-input">
+          <span class="filter__checkbox-text">Freesize</span>
+        </label>
+      </fieldset>
+      <fieldset class="filter__column">
+        <legend class="filter__title">Материал</legend>
+        <label class="filter__checkbox">
+          <input type="checkbox" class="filter__checkbox-input">
+          <span class="filter__checkbox-text">Вискоза</span>
+        </label>
+        <label class="filter__checkbox">
+          <input type="checkbox" class="filter__checkbox-input">
+          <span class="filter__checkbox-text">Кашемир</span>
+        </label>
+        <label class="filter__checkbox">
+          <input type="checkbox" class="filter__checkbox-input">
+          <span class="filter__checkbox-text">Акрил</span>
+        </label>
+        <label class="filter__checkbox">
+          <input type="checkbox" class="filter__checkbox-input" disabled>
+          <span class="filter__checkbox-text">Хлопок</span>
+        </label>
+        <label class="filter__checkbox">
+          <input type="checkbox" class="filter__checkbox-input" disabled>
+          <span class="filter__checkbox-text">Шерсть</span>
+        </label>
+        <label class="filter__checkbox">
+          <input type="checkbox" class="filter__checkbox-input">
+          <span class="filter__checkbox-text">Мохер</span>
+        </label>
+      </fieldset>
+      <fieldset class="filter__column">
+        <legend class="filter__title">Длина</legend>
+        <label class="filter__checkbox">
+          <input type="checkbox" class="filter__checkbox-input">
+          <span class="filter__checkbox-text">Мини</span>
+        </label>
+        <label class="filter__checkbox">
+          <input type="checkbox" class="filter__checkbox-input">
+          <span class="filter__checkbox-text">Миди</span>
+        </label>
+        <label class="filter__checkbox">
+          <input type="checkbox" class="filter__checkbox-input">
+          <span class="filter__checkbox-text">В пол</span>
+        </label>
+      </fieldset>
+      <fieldset class="filter__column">
+        <legend class="filter__title">Цена, &#8381;</legend>
+        <label class="filter__checkbox">
+          <input type="checkbox" class="filter__checkbox-input">
+          <span class="filter__checkbox-text">Менее 5000</span>
+        </label>
+        <label class="filter__checkbox">
+          <input type="checkbox" class="filter__checkbox-input">
+          <span class="filter__checkbox-text">5000 - 10 000</span>
+        </label>
+        <label class="filter__checkbox">
+          <input type="checkbox" class="filter__checkbox-input">
+          <span class="filter__checkbox-text">10 000 - 15 000</span>
+        </label>
+        <label class="filter__checkbox">
+          <input type="checkbox" class="filter__checkbox-input">
+          <span class="filter__checkbox-text">Более 15 000</span>
+        </label>
+      </fieldset>
+    </div>
+    <div class="filter__btns">
+      <a href="" class="filter__btn btn btn--fill">
+        <span>Показать
+          <span>17</span> товаров</span>
+      </a>
+      <button class="filter__reset" type="reset">
+        @include('../svg/close.html') Сбросить все
+      </button>
+      <button class="filter__close" type="button">
+        @include('../svg/arrow-circle.html')
+      </button>
+    </div>
+  </form>
+  <div class="filter-overlay"></div>
+</div>
+<!-- ./filter-wrap--desktop -->
+
+<!-- filter-wrap--mobile -->
+<div class="filter-wrap filter-wrap--mobile">
+  <form class="filter">
+    <button class="filter__close" type="button">
+      @include('../svg/arrow-circle.html')
+    </button>
+
+    <ul class="accordion-container">
+      <li class="accordion">
+        <button class="accordion__btn" type="button">
+          Сортировка @include('../svg/arrow-down.html')
+        </button>
+        <fieldset class="accordion__content filter__column">
+          <label class="filter__checkbox">
+            <input type="checkbox" class="filter__checkbox-input">
+            <span class="filter__checkbox-text">По возрастанию цены</span>
+          </label>
+          <label class="filter__checkbox">
+            <input type="checkbox" class="filter__checkbox-input">
+            <span class="filter__checkbox-text">По убыванию цены</span>
+          </label>
+        </fieldset>
+      </li>
+      <li class="accordion">
+        <button class="accordion__btn" type="button">
+          Цвет @include('../svg/arrow-down.html')
+        </button>
+        <fieldset class="accordion__content filter__column">
+          <label class="filter__checkbox">
+            <input type="checkbox" class="filter__checkbox-input">
+            <span class="filter__checkbox-text">Бежевый</span>
+          </label>
+          <label class="filter__checkbox">
+            <input type="checkbox" class="filter__checkbox-input" disabled>
+            <span class="filter__checkbox-text">Белый</span>
+          </label>
+          <label class="filter__checkbox">
+            <input type="checkbox" class="filter__checkbox-input" disabled>
+            <span class="filter__checkbox-text">Бирюзовый</span>
+          </label>
+          <button class="filter__btn-more" type="button" data-filter="color">
+            @include('../svg/more.html')
+          </button>
+          <div class="filter__column filter__column--hidden" data-filter="color">
+            <label class="filter__checkbox">
+              <input type="checkbox" class="filter__checkbox-input">
+              <span class="filter__checkbox-text">Болотный</span>
+            </label>
+            <label class="filter__checkbox">
+              <input type="checkbox" class="filter__checkbox-input">
+              <span class="filter__checkbox-text">Бордовый</span>
+            </label>
+            <label class="filter__checkbox">
+              <input type="checkbox" class="filter__checkbox-input">
+              <span class="filter__checkbox-text">Бронза</span>
+            </label>
+            <label class="filter__checkbox">
+              <input type="checkbox" class="filter__checkbox-input">
+              <span class="filter__checkbox-text">Голубой</span>
+            </label>
+            <label class="filter__checkbox">
+              <input type="checkbox" class="filter__checkbox-input">
+              <span class="filter__checkbox-text">Желтый</span>
+            </label>
+          </div>
+        </fieldset>
+      </li>
+      <li class="accordion">
+        <button class="accordion__btn" type="button">
+          Размер @include('../svg/arrow-down.html')
+        </button>
+        <fieldset class="accordion__content filter__column">
+          <label class="filter__checkbox">
+            <input type="checkbox" class="filter__checkbox-input">
+            <span class="filter__checkbox-text">XS</span>
+          </label>
+          <label class="filter__checkbox">
+            <input type="checkbox" class="filter__checkbox-input">
+            <span class="filter__checkbox-text">S</span>
+          </label>
+          <label class="filter__checkbox">
+            <input type="checkbox" class="filter__checkbox-input">
+            <span class="filter__checkbox-text">M</span>
+          </label>
+          <label class="filter__checkbox">
+            <input type="checkbox" class="filter__checkbox-input">
+            <span class="filter__checkbox-text">L</span>
+          </label>
+          <label class="filter__checkbox">
+            <input type="checkbox" class="filter__checkbox-input">
+            <span class="filter__checkbox-text">XL</span>
+          </label>
+          <label class="filter__checkbox">
+            <input type="checkbox" class="filter__checkbox-input">
+            <span class="filter__checkbox-text">Freesize</span>
+          </label>
+        </fieldset>
+      </li>
+      <li class="accordion">
+        <button class="accordion__btn" type="button">
+          Материал @include('../svg/arrow-down.html')
+        </button>
+        <fieldset class="accordion__content filter__column">
+          <label class="filter__checkbox">
+            <input type="checkbox" class="filter__checkbox-input">
+            <span class="filter__checkbox-text">Вискоза</span>
+          </label>
+          <label class="filter__checkbox">
+            <input type="checkbox" class="filter__checkbox-input">
+            <span class="filter__checkbox-text">Кашемир</span>
+          </label>
+          <label class="filter__checkbox">
+            <input type="checkbox" class="filter__checkbox-input">
+            <span class="filter__checkbox-text">Акрил</span>
+          </label>
+          <label class="filter__checkbox">
+            <input type="checkbox" class="filter__checkbox-input">
+            <span class="filter__checkbox-text">Хлопок</span>
+          </label>
+          <label class="filter__checkbox">
+            <input type="checkbox" class="filter__checkbox-input">
+            <span class="filter__checkbox-text">Шерсть</span>
+          </label>
+          <label class="filter__checkbox">
+            <input type="checkbox" class="filter__checkbox-input">
+            <span class="filter__checkbox-text">Мохер</span>
+          </label>
+        </fieldset>
+      </li>
+      <li class="accordion">
+        <button class="accordion__btn" type="button">
+          Длина @include('../svg/arrow-down.html')
+        </button>
+        <fieldset class="accordion__content filter__column">
+          <label class="filter__checkbox">
+            <input type="checkbox" class="filter__checkbox-input">
+            <span class="filter__checkbox-text">Мини</span>
+          </label>
+          <label class="filter__checkbox">
+            <input type="checkbox" class="filter__checkbox-input">
+            <span class="filter__checkbox-text">Миди</span>
+          </label>
+          <label class="filter__checkbox">
+            <input type="checkbox" class="filter__checkbox-input">
+            <span class="filter__checkbox-text">В пол</span>
+          </label>
+        </fieldset>
+      </li>
+      <li class="accordion">
+        <button class="accordion__btn" type="button">
+          Цена, &#8381; @include('../svg/arrow-down.html')
+        </button>
+        <fieldset class="accordion__content filter__column">
+          <label class="filter__checkbox">
+            <input type="checkbox" class="filter__checkbox-input">
+            <span class="filter__checkbox-text">Менее 5000</span>
+          </label>
+          <label class="filter__checkbox">
+            <input type="checkbox" class="filter__checkbox-input">
+            <span class="filter__checkbox-text">5000 - 10 000</span>
+          </label>
+          <label class="filter__checkbox">
+            <input type="checkbox" class="filter__checkbox-input">
+            <span class="filter__checkbox-text">10 000 - 15 000</span>
+          </label>
+          <label class="filter__checkbox">
+            <input type="checkbox" class="filter__checkbox-input">
+            <span class="filter__checkbox-text">Более 15 000</span>
+          </label>
+        </fieldset>
+      </li>
+    </ul>
+
+    <a href="" class="filter__btn btn">
+      Показать
+      <span>17</span> товаров
+    </a>
+    <button class="filter__reset" type="reset">
+      @include('../svg/close.html') Сбросить все
+    </button>
+  </form>
+</div>
+<!-- ./filter-wrap--mobile -->

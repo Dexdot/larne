@@ -1,0 +1,77 @@
+// Кредитка
+  
+  
+// <div class="credit-card">
+//   @include('../svg/card.html')
+//   <!-- mastercard -->
+//   @include('../svg/mastercard.html')
+//   <!-- visa -->
+//   @include('../svg/visa.html')
+//   <!-- mir -->
+//   @include('../svg/mir.html')
+
+//   <input class="credit-card__number" type="text" required autocomplete="cc-number" name="cc-number" placeholder="Номер карты"
+//     maxlength="22">
+
+//   <input class="credit-card__expiry" type="text" required autocomplete="cc-exp" name="cc-exp" placeholder="ММ/ГГ">
+
+//   <input class="credit-card__csc" type="text" required autocomplete="cc-csc" name="cc-csc" placeholder="CCV" maxlength="3">
+
+// </div>
+  
+.credit-card
+  margin: auto
+  margin-bottom: 40px
+  // max-width: 480px
+  width: 100%
+
+  position: relative
+  border-bottom: 2px solid #e8e8e8
+  padding-left: 34px
+  padding-bottom: 12px
+  
+  display: flex
+  flex-direction: row
+  justify-content: flex-end
+  @media (max-width: 500px)
+    padding-left: 0
+  .i
+    &-card,
+    &-mastercard,
+    &-visa,
+    &-mir
+      width: 18px
+      height: 18px
+      position: absolute
+      top: 0
+      left: 0
+      pointer-events: none
+      transition: $trs
+      opacity: 0
+      &.is-visible
+        opacity: 1
+  &__number
+    +unbtn
+    flex: 1
+    @media (max-width: 500px)
+      flex: unset
+      width: 100%
+      padding-left: 24px
+      padding-right: 8px
+  &__csc
+    +unbtn
+    width: 32px
+    margin-left: 16px
+  &__expiry
+    width: 50px
+    +unbtn
+  input
+    font-size: 14px
+    letter-spacing: 0.05em
+    color: $black
+    +tt(md)
+    &::placeholder
+      color: rgba($black, 0.4)
+
+
+

@@ -1,0 +1,73 @@
+@include('../blocks/head.html')
+<!-- ./head -->
+
+@include('../blocks/preloader.html')
+
+<main class="main-wrapper">
+	@include('../blocks/header.html')
+	<div class="profile">
+
+		<!-- profile__container -->
+		<div class="profile__container">
+			<!-- Профиль -->
+			@include('../blocks/profile__block--profile.html')
+			<!-- ./Профиль -->
+
+			<!-- Пароль -->
+			@include('../blocks/profile__block--password.html')
+			<!-- ./Пароль -->
+
+			<!-- Адрес доставки -->
+			@include('../blocks/profile__block--delivery.html')
+			<!-- ./Адрес доставки -->
+
+			<!-- Способ оплаты -->
+			@include('../blocks/profile__block--payment.html')
+			<!-- ./Способ оплаты -->
+
+			<!-- Заказы -->
+			@include('../blocks/profile__block--orders.html')
+			<!-- ./Заказы -->
+
+			<!-- Избранное -->
+			@include('../blocks/profile__block--favorite.html')
+			<!-- ./Избранное -->
+		</div>
+		<!-- ./profile__container -->
+
+		<!-- profile__aside -->
+		<div class="profile__aside">
+			<button class="profile__tab profile__tab--is-active" data-profile="profile">Профиль</button>
+			<button class="profile__tab" data-profile="password">Пароль</button>
+			<button class="profile__tab" data-profile="delivery">Адрес доставки</button>
+			<button class="profile__tab" data-profile="payment">Способ оплаты</button>
+			<button class="profile__tab" data-profile="orders">Заказы</button>
+			<button class="profile__tab" data-profile="favorite">Избранное</button>
+			<button class="profile__logout">Выйти</button>
+		</div>
+		<!-- ./profile__aside -->
+
+	</div>
+</main>
+
+<!-- menu -->
+@include('../blocks/menu.html')
+<!-- help -->
+@include('../blocks/help.html')
+<!-- checkout -->
+@include('../blocks/checkout.html')
+<!-- reg -->
+@include('../blocks/reg.html')
+<!-- recovery -->
+@include('../blocks/recovery.html')
+<!-- login -->
+@include('../blocks/login.html')
+<!-- search -->
+@include('../blocks/search.html')
+<!-- subscribe -->
+@include('../blocks/subscribe.html')
+
+<script defer src="js/profile.js"></script>
+
+<!-- footer -->
+@include('../blocks/footer.html')

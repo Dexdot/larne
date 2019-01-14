@@ -1,0 +1,92 @@
+.page-404
+  .gallery
+    margin-top: 0
+
+.notfound
+  width: 100%
+  margin-top: 168px
+
+  +tt(md)
+  font-size: 10px
+  letter-spacing: 0.1em
+  text-transform: uppercase
+
+  position: relative
+  @media (max-width: 620px)
+    margin-top: 10em
+  &__inner
+    +f(16)
+    padding-left: calc(14.5em + 112px)
+    @media (max-width: 620px)
+      padding-left: 0
+  &__title
+    +tt(bold)
+    font-size: 36px
+    line-height: 1
+    letter-spacing: 0.05em
+    text-transform: none
+
+    margin-bottom: 32px
+
+    position: relative
+    @media (min-width: 2200px)
+      font-size: 48px
+    @media (max-width: 620px)
+      font-size: 24px
+      margin-bottom: 24px
+    &::before
+      content: ''
+      position: absolute
+      top: 18px
+      left: -112px
+
+      width: 72px
+      height: 2px
+
+      background: $black
+  &__subtitle
+    font-size: 10px
+    line-height: 22px
+    max-width: 64em
+    @media (max-width: 620px)
+      max-width: unset
+    a
+      color: $black
+      &:visited, &:active, &:focus
+        color: $black
+  &__tip
+    letter-spacing: 0.2em
+    line-height: 1.8
+
+    position: absolute
+    top: 0
+    left: 0
+    @media (max-width: 620px)
+      position: static
+      margin-bottom: 32px
+  &__search
+    cursor: pointer
+
+// Баннеры
+.notfound
+  &__banners
+    width: 100%
+    margin-top: 6.5em
+
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    @media (max-width: 620px)
+      margin-top: 56px
+  &__banner
+    margin-bottom: 28px
+    width: calc((89vw / 2) - 14px)
+    height: calc((89vw / 2) - 14px)
+
+    position: relative
+    @media (max-width: 480px)
+      margin-bottom: 16px
+      width: calc((89vw / 2) - 8px)
+      height: calc((89vw / 2) - 8px)
+

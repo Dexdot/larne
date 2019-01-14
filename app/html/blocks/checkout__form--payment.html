@@ -1,0 +1,21 @@
+<form class="checkout__form checkout__form--payment">
+  <div class="checkout__content">
+    @include('../blocks/checkout__top.html')
+    <span class="checkout__title">Способ оплаты</span>
+    <p class="checkout__subtitle">Укажите преподчтительный способ оплаты</p>
+
+    <div class="payment">
+      <label class="checkbox js-radio">
+        <input class="checkbox__input" type="radio" name="payment-type" value="cash" required checked> Наличными при получении @include('../svg/daw.html')
+      </label>
+      <label class="checkbox js-radio">
+        <input class="checkbox__input" type="radio" name="payment-type" value="online" required checked> Онлайн картой курьеру @include('../svg/daw.html')
+      </label>
+      <label class="checkbox js-radio">
+        <input class="checkbox__input" type="radio" name="payment-type" value="yandex" required checked> Яндекс.Касса @include('../svg/daw.html')
+      </label>
+    </div>
+
+  </div>
+  <button class="btn btn--lg checkout__btn checkout__btn--payment" type="submit">Подтвердить детали заказа</button>
+</form>

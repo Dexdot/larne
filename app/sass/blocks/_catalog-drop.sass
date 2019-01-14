@@ -1,0 +1,84 @@
+// Выпадашка по ховеру на каталог
+
+.catalog-drop
+
+  z-index: 1
+  position: absolute
+  top: 100%
+  left: 0
+  width: 100%
+  padding-top: 50px
+
+  display: flex
+  flex-direction: row
+  align-items: stretch
+  justify-content: space-between
+
+  background: #fff
+  transition: all 0s ease-out
+  transform-origin: 50% 0%
+  transform: scaleY(0)
+  pointer-events: none
+  opacity: 0
+
+  @media (max-width: 990px)
+    display: none
+
+  &__list
+    position: relative
+    z-index: 1
+
+    background-color: #f8f8f8
+    width: 50%
+    padding-left: 5.5%
+    padding-top: 6.7% // 96px
+    padding-bottom: 8.9%
+    &-item
+      line-height: 1
+      margin-bottom: 14px
+      &:first-child
+        margin-bottom: 30px
+      &:last-child
+        margin-bottom: 0
+  &__link
+    +tt(md)
+    color: $black
+    font-size: 14px
+    letter-spacing: 0.075em
+    &:visited, &:active
+      color: $black
+    +underline
+    &::after
+      bottom: -4px
+  &__banner
+    width: 50%
+    overflow: hidden
+    position: relative
+    z-index: 1
+    &:hover
+      .catalog-drop__img
+        transform: scale(1.1)
+  &__img
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
+    transition: $trs-img
+
+
+  &__list, &__banner
+    opacity: 0
+    transition: opacity 0.35s ease-out 0.45s
+.header__list-item:first-child:hover .catalog-drop
+  opacity: 1
+  pointer-events: auto
+  transform: scaleY(1)
+  transition: opacity 0.35s ease-out, transform 0.45s ease-out
+  &__list, &__banner
+    opacity: 1
+
+.page-catalog .main-wrapper .catalog-drop,
+.help .catalog-drop
+  top: calc(100% - 48px)

@@ -1,0 +1,161 @@
+// Успешный заказ
+
+.success
+  z-index: 3
+  position: fixed
+  top: 0
+  right: 0
+  width: 100vw
+  height: 100vh
+
+  transition: $trs-forhims-6
+  pointer-events: none
+  &--is-visible
+    pointer-events: auto
+    .success
+      &__form
+        transform: translateX(0)
+      &__overlay
+        opacity: 1
+        pointer-events: auto
+      &__close, &__btn
+        transform: translateX(0)
+  &__overlay
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    +unbtn
+    cursor: auto
+    background: $overlay-bg
+
+    transition: $trs-forhims-6
+    opacity: 0
+    pointer-events: none
+  &__form
+    padding-bottom: 64px
+    position: fixed
+    top: 0
+    right: 0
+    z-index: 1
+    background: #ffffff
+    width: 50vw
+    height: 100%
+    margin-left: auto
+    transform: translateX(51vw)
+    transition: $trs-forhims-6
+    &--is-active
+      display: flex    
+    @media (min-width: 1440px)
+      justify-content: center
+    @media (max-width: 1100px)
+      width: 670px
+      transform: translateX(671px)
+    @media (max-width: 700px)
+      width: 100vw
+      transform: translateX(101vw)
+  // &__btn
+  //   z-index: 1
+  //   position: relative
+  //   &--back
+  //     display: flex
+  //     align-items: center
+  //     justify-content: center
+  //     pointer-events: none
+  //     user-select: none
+
+
+.success
+  &__top
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+    justify-content: center
+    margin-bottom: 88px
+  &__close
+
+    top: 48px
+    position: absolute
+    right: calc(46.3vw - 32px)
+    +unbtn
+
+    width: 32px
+    min-height: 32px
+    border-radius: 50%
+
+    @media (max-width: 1100px)
+      right: auto
+      left: 5.5vw
+    @media (max-width: 500px)
+      top: 16px
+
+  &__content
+    position: relative
+    
+    padding-top: 56px
+    padding-bottom: 80px
+    padding-left: 8.5vw
+    padding-right: 8.5vw
+
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+    width: 100%
+    height: 50%
+    +scrollbar
+    // @media (min-width: 1440px)
+    //   max-width: calc(480px + 17vw)
+    @media (max-width: 1230px)
+      padding-left: 5.5vw
+      padding-right: 5.5vw
+    @media (max-width: 500px)
+      padding-left: 10vw
+      padding-right: 10vw
+    @media (max-width: 500px)
+      padding-top: 72px
+      // padding-top: 10.5em
+      padding-bottom: 11.5em
+  &__btn
+    position: absolute
+    bottom: 0
+    right: 0
+    // width: 50vw
+    // z-index: 3
+
+    // transition: $trs-forhims-6
+    // transform: translateX(51vw)
+
+    // @media (max-width: 1100px)
+    //   width: 670px
+    //   transform: translateX(671px)
+    // @media (max-width: 700px)
+    //   width: 100vw
+    //   transform: translateX(101vw)
+  &__title
+    font-size: 20px
+    +tt(bold)
+    line-height: 1
+    letter-spacing: 0.05em
+    margin-bottom: 12px
+    text-align: center
+    display: block
+    @media (min-width: 2200px)
+      font-size: 22px
+    @media (max-width: 500px)
+      font-size: 20px
+  &__subtitle
+    +tt(md)
+    font-size: 12px
+    text-align: center
+    letter-spacing: 0.05em
+    
+    display: block
+    margin: 0 auto
+    opacity: 0.4
+
+    @media (min-width: 2200px)
+      font-size: 14px
+

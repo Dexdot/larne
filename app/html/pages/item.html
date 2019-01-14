@@ -1,0 +1,450 @@
+@include('../blocks/head.html')
+<!-- ./head -->
+
+@include('../blocks/preloader.html')
+
+<main class="main-wrapper">
+	@include('../blocks/header.html')
+
+	<!-- item -->
+	<div class="fluid">
+		<div class="item">
+
+			<!-- item__left -->
+			<div class="item__left">
+				<button class="item__fav">@include('../svg/heart.html')</button>
+
+				<!-- desktop -->
+				<ul class="item__images">
+					<li class="item__image-wrap">
+						<img class="item__image" src="img/products/6.jpg" alt="Платье с пышной юбкой и геометричным принтом">
+					</li>
+					<li class="item__image-wrap">
+						<img class="item__image" src="img/products/6.1.jpg" alt="Платье с пышной юбкой и геометричным принтом">
+					</li>
+					<li class="item__image-wrap">
+						<img class="item__image" src="img/products/6.2.jpg" alt="Платье с пышной юбкой и геометричным принтом">
+					</li>
+				</ul>
+				<ul class="item__thumbs">
+					<li class="item__thumb">
+						<button class="item__thumb-btn" type="button">
+							<img class="item__image" src="img/products/6.jpg" alt="Платье с пышной юбкой и геометричным принтом">
+						</button>
+					</li>
+					<li class="item__thumb">
+						<button class="item__thumb-btn" type="button">
+							<img class="item__image" src="img/products/6.1.jpg" alt="Платье с пышной юбкой и геометричным принтом">
+						</button>
+					</li>
+					<li class="item__thumb">
+						<button class="item__thumb-btn" type="button">
+							<img class="item__image" src="img/products/6.2.jpg" alt="Платье с пышной юбкой и геометричным принтом">
+						</button>
+					</li>
+				</ul>
+				<!-- ./desktop -->
+
+				<!-- mobile -->
+				<ul class="item__images item__images--mob">
+					<li>
+						<img src="img/products/6.jpg" alt="Платье с пышной юбкой и геометричным принтом">
+					</li>
+					<li>
+						<img src="img/products/6.1.jpg" alt="Платье с пышной юбкой и геометричным принтом">
+					</li>
+					<li>
+						<img src="img/products/6.2.jpg" alt="Платье с пышной юбкой и геометричным принтом">
+					</li>
+				</ul>
+				<ul class="item__thumbs item__thumbs--mob">
+					<li>
+						<button type="button"></button>
+					</li>
+					<li>
+						<button type="button"></button>
+					</li>
+					<li>
+						<button type="button"></button>
+					</li>
+				</ul>
+				<!-- ./mobile -->
+			</div>
+			<!-- ./item__left -->
+
+			<!-- item__info -->
+			<div class="item__info">
+
+				<!-- item__header -->
+				<div class="item__header">
+					<div class="item__new">NEW</div>
+					<div class="item__links">
+						<a class="item__link item__link--prev" href="./item.html">
+							@include('../svg/arrow-mailing.html')
+						</a>
+						<a class="item__link item__link--next" href="./item.html">
+							@include('../svg/arrow-mailing.html')
+						</a>
+					</div>
+				</div>
+				<!-- ./ -->
+
+				<h1 class="item__name">Платье с пышной юбкой и геометричным принтом</h1>
+				<span class="item__code">М01/737</span>
+				<span class="item__price">
+					<span class="item__price-num">4200</span> &#8381;
+				</span>
+				<span class="item__price item__price--old">
+					<span class="item__price-num">6500</span> &#8381;
+				</span>
+				<span class="item__color-text">Синий</span>
+
+				<!-- item__colors -->
+				<div class="item__colors">
+					<a class="item__color item__color--current" data-color="Синий" href="./item.html">
+						<div class="item__color-img-wrap">
+							<img src="img/products/color0.png" alt="Синий" class="item__color-img">
+						</div>
+					</a>
+					<a class="item__color" data-color="Голубой" href="./item.html">
+						<div class="item__color-img-wrap">
+							<img src="img/products/color1.png" alt="Голубой" class="item__color-img">
+						</div>
+					</a>
+					<a class="item__color" data-color="Розовый" href="./item.html">
+						<div class="item__color-img-wrap">
+							<img src="img/products/color2.png" alt="Розовый" class="item__color-img">
+						</div>
+					</a>
+					<a class="item__color" data-color="Бежевый" href="./item.html">
+						<div class="item__color-img-wrap">
+							<img src="img/products/color3.png" alt="Бежевый" class="item__color-img">
+						</div>
+					</a>
+				</div>
+				<!-- ./item__colors -->
+
+				<!-- item__sizes -->
+				<div class="item__sizes">
+					<div>
+						<label class="item__size">
+							<input type="radio" name="size">
+							<span>XS</span>
+						</label>
+						<label class="item__size">
+							<input type="radio" name="size">
+							<span>S</span>
+						</label>
+						<label class="item__size">
+							<input type="radio" name="size">
+							<span>M</span>
+						</label>
+						<label class="item__size">
+							<input type="radio" name="size">
+							<span>L</span>
+						</label>
+						<label class="item__size">
+							<input type="radio" name="size">
+							<span>XL</span>
+						</label>
+						<label class="item__size">
+							<input type="radio" name="size" disabled>
+							<span>FREE</span>
+						</label>
+					</div>
+					<div>
+						<button class="item__mysize" type="button">На заказ</button>
+						<button class="item__all-size">
+							@include('../svg/hanger.html') Все размеры
+						</button>
+					</div>
+				</div>
+				<!-- ./item__sizes -->
+
+				<!-- item__sizes-mob -->
+				<div class="item__sizes-mob">
+					<div class="item__sizes-overlay"></div>
+					<div class="item__sizes-content">
+						<div>
+							<label class="item__size">
+								<input type="radio" name="size">
+								<span>XS</span>
+							</label>
+							<label class="item__size">
+								<input type="radio" name="size">
+								<span>S</span>
+							</label>
+							<label class="item__size">
+								<input type="radio" name="size">
+								<span>M</span>
+							</label>
+							<label class="item__size">
+								<input type="radio" name="size">
+								<span>L</span>
+							</label>
+							<label class="item__size">
+								<input type="radio" name="size">
+								<span>XL</span>
+							</label>
+							<label class="item__size">
+								<input type="radio" name="size" disabled>
+								<span>FREE</span>
+							</label>
+						</div>
+						<div>
+							<button class="item__mysize" type="button">На заказ</button>
+							<button class="item__all-size">
+								@include('../svg/hanger.html') Все размеры
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- ./item__sizes-mob -->
+
+				<!-- accordion-container -->
+				<ul class="accordion-container">
+					<li class="accordion">
+						<button class="accordion__btn" type="button">Описание</button>
+						<div class="accordion__content accordion__content--opacity">
+							<p>
+								Хлопок, яркий небесно-голубой цвет в белый горошек. Наивный романтизм, воздушная пышная юбка, одним словом —
+								любовь! Прекрасно
+								подойдет для свидания, пикника или просто прогулки в центре города
+							</p>
+						</div>
+					</li>
+					<li class="accordion">
+						<button class="accordion__btn" type="button">Характеристики</button>
+						<div class="accordion__content accordion__content--full-width">
+							<ul class="item__chars chars">
+								<li class="chars__row">
+									<span>Состав:</span>
+									<span>Хлопок / Вискоза</span>
+								</li>
+								<li class="chars__row">
+									<span>Длина:</span>
+									<span>112 см</span>
+								</li>
+								<li class="chars__row">
+									<span>Вид застежки:</span>
+									<span>Молния на спинке</span>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="accordion">
+						<button class="accordion__btn" type="button">Состав и уход</button>
+						<div class="accordion__content">
+							<div class="item__care">
+								Состав: Хлопок / Вискоза
+								<ul>
+									<li>
+										@include('../svg/noironing.html')
+										<span>Не гладить</span>
+									</li>
+									<li>
+										@include('../svg/dry.html')
+										<span>Не использовать машинную сушку</span>
+									</li>
+									<li>
+										@include('../svg/bleach.html')
+										<span>Отбеливание запрещено</span>
+									</li>
+									<li>
+										@include('../svg/wash.html')
+										<span>Машинная стирка 30˚ / Короткий отжим</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<!-- ./accordion-container -->
+
+				<div class="item__btns">
+					<button class="item__btn item__btn--cart btn btn--fill" type="button">
+						<span>В корзину</span>
+					</button>
+					<button class="item__btn item__btn--one" type="button">Купить в 1 клик</button>
+				</div>
+			</div>
+			<!-- ./item__info -->
+
+		</div>
+	</div>
+	<!-- ./item -->
+
+	<!-- item-tabs -->
+	<div class="fluid">
+		<div class="item-tabs">
+			<button class="item-tab item-tab--likely is-active" type="button">
+				Вам может @include('../svg/heart.html')
+			</button>
+			<button class="item-tab item-tab--viewed" type="button">Просмотренные</button>
+		</div>
+	</div>
+	<!-- ./item-tabs -->
+
+	<!-- item-products -->
+	<div class="item-products">
+
+		<!-- products__content--likely -->
+		<div class="products__content products__content--likely is-visible">
+
+			<div class="product">
+				<div class="product__inner">
+					<a href="./item.html" class="product__img-wrap" draggable="false" ondragstart="return false;">
+						<img class="product__img" draggable="false" ondragstart="return false;" src="img/products/1.jpg" alt="Голубое платье с пышной юбкой">
+					</a>
+				</div>
+				<div class="product__info">
+					<a class="product__name" href="./item.html" draggable="false" ondragstart="return false;">
+						Голубое платье с пышной юбкой
+					</a>
+					<span class="product__price">
+						<span class="product__num">6500</span>&#8381;
+					</span>
+				</div>
+			</div>
+			<div class="product">
+				<div class="product__inner">
+					<a href="./item.html" class="product__img-wrap" draggable="false" ondragstart="return false;">
+						<img class="product__img" draggable="false" ondragstart="return false;" src="img/products/2.jpg" alt="Шифоновое платье лавандового цвета">
+					</a>
+				</div>
+				<div class="product__info">
+					<a class="product__name" href="./item.html" draggable="false" ondragstart="return false;">
+						Шифоновое платье лавандового цвета
+					</a>
+					<span class="product__price">
+						<span class="product__num">5800</span>&#8381;
+					</span>
+				</div>
+			</div>
+			<div class="product">
+				<div class="product__inner">
+					<a href="./item.html" class="product__img-wrap" draggable="false" ondragstart="return false;">
+						<img class="product__img" draggable="false" ondragstart="return false;" src="img/products/3.jpg" alt="Голубое платье с сердечками">
+					</a>
+
+				</div>
+				<div class="product__info">
+					<a class="product__name" href="./item.html" draggable="false" ondragstart="return false;">
+						Голубое платье с сердечками
+					</a>
+					<span class="product__price">
+						<span class="product__num">6200</span>&#8381;
+					</span>
+				</div>
+			</div>
+			<div class="product">
+				<div class="product__inner">
+					<a href="./item.html" class="product__img-wrap" draggable="false" ondragstart="return false;">
+						<img class="product__img" draggable="false" ondragstart="return false;" src="img/products/4.jpg" alt="Голубое платье с пышной юбкой">
+					</a>
+				</div>
+				<div class="product__info">
+					<a class="product__name" href="./item.html" draggable="false" ondragstart="return false;">
+						Голубое платье с пышной юбкой
+					</a>
+					<span class="product__price">
+						<span class="product__num">6500</span>&#8381;
+					</span>
+				</div>
+			</div>
+			<div class="product">
+				<div class="product__inner">
+					<a href="./item.html" class="product__img-wrap" draggable="false" ondragstart="return false;">
+						<img class="product__img" draggable="false" ondragstart="return false;" src="img/products/2.jpg" alt="Шифоновое платье лавандового цвета">
+					</a>
+				</div>
+				<div class="product__info">
+					<a class="product__name" href="./item.html" draggable="false" ondragstart="return false;">
+						Шифоновое платье лавандового цвета
+					</a>
+					<span class="product__price">
+						<span class="product__num">5800</span>&#8381;
+					</span>
+				</div>
+			</div>
+
+		</div>
+		<!-- ./products__content--likely -->
+
+		<!-- products__content--viewed -->
+		<div class="products__content products__content--viewed">
+
+			<div class="product">
+				<div class="product__inner">
+					<a href="./item.html" class="product__img-wrap" draggable="false" ondragstart="return false;">
+						<img class="product__img" draggable="false" ondragstart="return false;" src="img/products/6.jpg" alt="Голубое платье с пышной юбкой">
+					</a>
+				</div>
+				<div class="product__info">
+					<a class="product__name" href="./item.html" draggable="false" ondragstart="return false;">
+						Голубое платье с пышной юбкой
+					</a>
+					<span class="product__price">
+						<span class="product__num">6500</span>&#8381;
+					</span>
+				</div>
+			</div>
+			<div class="product">
+				<div class="product__inner">
+					<a href="./item.html" class="product__img-wrap" draggable="false" ondragstart="return false;">
+						<img class="product__img" draggable="false" ondragstart="return false;" src="img/products/2.jpg" alt="Шифоновое платье лавандового цвета">
+					</a>
+				</div>
+				<div class="product__info">
+					<a class="product__name" href="./item.html" draggable="false" ondragstart="return false;">
+						Шифоновое платье лавандового цвета
+					</a>
+					<span class="product__price">
+						<span class="product__num">5800</span>&#8381;
+					</span>
+				</div>
+			</div>
+
+		</div>
+		<!-- ./products__content--viewed -->
+
+	</div>
+	<!-- ./item-products -->
+
+
+	<!-- instagram -->
+	@include('../blocks/instagram.html')
+</main>
+
+<!-- item-modal -->
+@include('../blocks/item-modal.html')
+<!-- oneclick -->
+@include('../blocks/oneclick.html')
+<!-- mysize -->
+@include('../blocks/mysize.html')
+<!-- sizeguide -->
+@include('../blocks/sizeguide.html')
+<!-- success -->
+@include('../blocks/success.html')
+
+<!-- menu -->
+@include('../blocks/menu.html')
+<!-- help -->
+@include('../blocks/help.html')
+<!-- checkout -->
+@include('../blocks/checkout.html')
+<!-- reg -->
+@include('../blocks/reg.html')
+<!-- recovery -->
+@include('../blocks/recovery.html')
+<!-- login -->
+@include('../blocks/login.html')
+<!-- search -->
+@include('../blocks/search.html')
+<!-- subscribe -->
+@include('../blocks/subscribe.html')
+
+<script defer src="js/item.js"></script>
+
+<!-- footer -->
+@include('../blocks/footer.html')

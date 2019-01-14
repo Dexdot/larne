@@ -1,0 +1,204 @@
+.filter
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  width: 100vw
+  padding-left: 13.3%
+  padding-right: 5.5%
+  padding-top: 8.3vw
+  padding-bottom: 56px
+
+  background: #fff
+  transition: $trs-forhims-6
+  transform: translateY(-100%)
+  &-wrap
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    z-index: 3
+
+    pointer-events: none
+    user-select: none
+    transition: $trs-forhims-6
+    &--is-visible
+      pointer-events: auto
+      user-select: auto
+      .filter-overlay
+        opacity: 1
+      .filter
+        transform: translateY(0)
+  
+    &--mobile
+      display: none
+      @media (max-width: 855px)
+        display: block
+    &--desktop
+      @media (max-width: 855px)
+        display: none
+  &-overlay
+    width: 100vw
+    height: 100vh
+    background: rgba(#fff, 0.7)
+
+    transition: 0.2s ease-out
+    opacity: 0
+  &__container
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+    justify-content: space-between
+
+    width: 100%
+    height: calc(100% - 56px)
+    max-height: 320px
+    transform: translateX(-16px)
+
+    overflow-y: auto
+    &::-webkit-scrollbar
+      width: 4px
+      height: 4px
+      background: #eaeaea
+      &-thumb
+        background-color: #000
+  &__column
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+    flex: 1
+    &--hidden
+      display: none
+    &--color
+      padding-left: 16px
+    @media (max-width: 855px)
+      align-items: stretch
+
+      
+  &__title
+    +tt(bold)
+    font-size: 12px
+    text-transform: uppercase
+    letter-spacing: 0.1em
+    margin-bottom: 32px
+  &__checkbox
+    cursor: pointer
+    position: relative
+    display: block
+    width: 100%
+    margin-top: 13px
+    // margin-bottom: 13px
+    // &:last-of-type
+    //   margin-bottom: 0
+    &-text
+      +tt(reg)
+      font-size: 14px
+      letter-spacing: 0.1em
+      color: $black
+      transition: $trs
+      z-index: -1
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        left: -16px
+        top: 5px
+        width: 5px
+        height: 5px
+        border-radius: 50%
+        background: $black
+        opacity: 0
+        transition: $trs
+    &-input
+      cursor: pointer
+      position: absolute
+      opacity: 0
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      &:disabled + .filter__checkbox-text
+        pointer-events: none
+        color: #b1b0b0
+      &:checked + .filter__checkbox-text
+        +tt(bold)
+        &::before
+          opacity: 1
+  &__btns
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+    margin-top: 48px
+    // transform: translateX(-16px)
+  &__btn
+    min-height: 56px
+    &:active, &:focus, &:visited
+      color: #fff
+    &-more
+      +unbtn
+      transform: translateX(-12px)
+      margin-top: 8px
+      .i-more-border
+        display: none
+  &__reset
+    +unbtn
+    font-size: 10px
+    +tt(md)
+    text-transform: uppercase
+    letter-spacing: 0.1em
+    display: flex
+    flex-direction: row
+    align-items: center
+    margin-left: 40px
+    +underline
+    &::after
+      bottom: -8px
+    .i-close
+      width: 8px
+      height: 8px
+      margin-right: 12px
+  &__close
+    min-height: 32px
+    margin-left: auto
+    +unbtn
+    transform: translateX(13px)
+    .i-arrow-circle
+      width: 32px
+      height: 32px
+      transform: rotate(-90deg)
+
+.filter-wrap--mobile
+  .filter
+    padding-top: 32px
+    padding-bottom: 40px
+    padding-left: 5.5%
+    padding-right: 5.5%
+    width: 100vw
+    height: 100vh
+
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+
+    +scrollbar
+
+    @media (max-width: 480px)
+      padding-left: 5%
+      padding-right: 5%
+    &__close, &__reset
+      transform: translate(0, 0)
+      margin: 0
+    &__reset
+      margin-top: 28px
+      min-height: 12px
+    &__checkbox
+      margin-top: 18px
+      &-text
+        color: $black
+        +tt(reg)
+      &-input
+        &:checked + .filter__checkbox-text
+          +tt(bold)

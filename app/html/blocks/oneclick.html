@@ -1,0 +1,97 @@
+<div class="oneclick">
+  <button class="oneclick__overlay"></button>
+  <form class="oneclick__form">
+
+    <!-- oneclick__content -->
+    <div class="oneclick__content">
+      <button class="oneclick__close" type="button">
+        @include('../svg/arrow-circle.html')
+      </button>
+      <span class="oneclick__title">Купить в 1 клик</span>
+      <p class="oneclick__subtitle">Проверьте данные заказа, введите имя и номер телефона.
+        <br> Наш менеджер свяжется с вами</p>
+
+      <!-- cart__products -->
+      <div class="cart__products">
+        <div class="cart__product cart__product--once">
+          <div class="cart__img-wrap">
+            <img class="cart__img" src="img/cart-img.jpg" alt="Голубое платье с пышной юбкой">
+            <span class="cart__amount-icon"></span>
+          </div>
+          <div class="cart__info">
+            <div class="cart__info-block">
+              <span class="cart__name">Голубое платье с пышной юбкой</span>
+              <span class="cart__code">М01/737</span>
+              <div class="cart__footer">
+                <span class="cart__size">Размер M</span>
+                <button class="cart__remove" type="button">Удалить</button>
+                <button class="cart__recovery" type="button">Восстановить</button>
+              </div>
+            </div>
+            <div class="cart__result">
+              <div>
+                <span class="cart__price">
+                  <span class="cart__price-num">6500</span>
+                  &#8381;
+                </span>
+                <span class="cart__amount"></span>
+              </div>
+              <div class="counter">
+                <input class="counter__input" type="number" value="2">
+                <button class="counter__btn counter__btn--minus" type="button">
+                  @include('../svg/minus.html')
+                </button>
+                /
+                <button class="counter__btn counter__btn--plus" type="button">
+                  @include('../svg/plus-2.html')
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- ./cart__products -->
+
+      <button class="oneclick__add" type="button">
+        + Добавить 2 товара из корзины
+      </button>
+
+      <div class="input input--readonly cart__input--result">
+        <label class="input__label">
+          <input class="input__field" type="text" required readonly value="16400">
+        </label>
+        <div class="input__result">
+          <span class="input__result-name">Сумма</span>
+          <span>
+            <span class="input__result-value">16400</span>&#8381;</span>
+        </div>
+      </div>
+
+      <div class="input">
+        <label class="input__label">
+          <input class="input__field" type="text" required placeholder="Имя">
+        </label>
+        <span class="input__tip input__tip--danger">Заполните поле</span>
+      </div>
+
+      <div class="input">
+        <label class="input__label">
+          <input class="input__field" type="text" required placeholder="Почта">
+        </label>
+        <span class="input__tip input__tip--danger">Заполните поле</span>
+      </div>
+
+      <div class="input">
+        <label class="input__label mask-phone">
+          <input class="input__field " type="text" required placeholder="Телефон">
+        </label>
+        <span class="input__tip input__tip--danger">Заполните поле</span>
+      </div>
+
+    </div>
+    <!-- ./oneclick__content -->
+
+    <button class="btn btn--lg oneclick__btn" type="submit">Оформить заказ</button>
+  </form>
+</div>

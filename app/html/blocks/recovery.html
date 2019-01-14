@@ -1,0 +1,31 @@
+<div class="recovery">
+  <button class="recovery__overlay"></button>
+  <form class="recovery__form">
+
+    <!-- recovery__content -->
+    <div class="recovery__content">
+      <button class="recovery__close" type="button">
+        @include('../svg/arrow-circle.html')
+      </button>
+      <span class="recovery__title">Восстановление пароля</span>
+      <p class="recovery__subtitle">Введите почту и мы отправим туда новый пароль</p>
+
+      <div class="input recovery__input">
+        <label class="input__label">
+          <input class="input__field" type="email" required placeholder="Email">
+        </label>
+        <span class="input__tip input__tip--danger">Заполните поле</span>
+      </div>
+
+      <div class="reg__signin-tip"> Уже зарегистрированы?
+        <button class="reg__signin" type="button">
+          Войти в аккаунт
+        </button>
+      </div>
+
+    </div>
+    <!-- ./recovery__content -->
+
+    <button class="btn btn--lg recovery__btn" type="submit">Сбросить пароль</button>
+  </form>
+</div>

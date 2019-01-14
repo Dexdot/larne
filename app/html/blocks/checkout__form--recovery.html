@@ -1,0 +1,22 @@
+<form class="checkout__form checkout__form--auth checkout__form--recovery">
+  <div class="checkout__content">
+    @include('../blocks/checkout__top.html')
+    <span class="checkout__title">Восстановление пароля</span>
+    <p class="checkout__subtitle">Введите почту и мы отправим туда новый пароль</p>
+
+    <div class="input checkout__input">
+      <label class="input__label">
+        <input class="input__field" type="email" required placeholder="Email">
+      </label>
+      <span class="input__tip input__tip--danger">Заполните поле</span>
+    </div>
+
+    <div class="checkout__signin-tip"> Уже зарегистрированы?
+      <button class="checkout__signin" type="button">
+        Войти в аккаунт
+      </button>
+    </div>
+
+  </div>
+  <button class="btn btn--lg checkout__btn checkout__btn--recovery" type="submit">Войти</button>
+</form>

@@ -1,0 +1,338 @@
+.page-profile
+
+  // sticky footer
+  body
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+  .footer
+    margin-top: auto
+
+  .footer--desktop
+    width: 50%
+    padding-left: 5.5%
+    .footer__copyright, .footer__dev
+      display: none
+    .fluid
+      padding: 0
+
+$prof-width: 370px
+.profile
+  margin-top: 44px
+  padding-left: 5.5%
+  padding-right: $prof-width
+  @media (max-width: 1120px)
+    padding-right: 280px
+  @media (max-width: 1020px)
+    padding-right: 256px
+  @media (max-width: 990px)
+    padding-right: 5.5%
+  @media (max-width: 480px)
+    margin-top: 24px
+  // Aside
+  &__aside
+    background: #f8f8f8
+
+    width: $prof-width
+    padding-top: 9rem
+
+    right: 0
+    bottom: 0
+    top: calc(44px + 48px + 1.5em)
+    position: absolute
+    &--sticky
+      top: 0
+      position: fixed
+      @media (max-width: 990px)
+        top: calc(44px + 48px + 1.5em)
+        position: absolute
+      @media (max-width: 480px)
+        top: calc(48px + 1.5em)
+
+    @media (min-width: 1650px)
+      width: 480px
+    @media (min-width: 1900px)
+      width: 640px
+    @media (min-width: 2200px)
+      width: 40vw
+      max-width: 1020px
+    @media (max-width: 1120px)
+      width: 280px
+    @media (max-width: 990px)
+      position: absolute
+      bottom: auto
+
+      width: 100vw
+      padding: 32px 5.5%
+
+      white-space: nowrap
+      overflow-x: auto
+      &::-webkit-scrollbar
+        display: none
+    @media (max-width: 480px)
+      top: calc(48px + 1.5em)
+
+
+  &__tab
+    +unbtn
+    display: block
+    margin-bottom: 32px
+    padding-left: 6.5rem
+
+    +tt(md)
+    font-size: 10px
+    letter-spacing: 0.1em
+    text-transform: uppercase
+    
+    opacity: 0.5
+    transition: $trs
+    position: relative
+    @media (max-width: 1120px)
+      padding-left: 56px
+    @media (max-width: 990px)
+      display: inline-block
+      margin-bottom: 0
+      margin-right: 32px
+
+      padding-left: 0
+    &::before
+      content: ''
+      background: #000
+
+      display: block
+      width: 2px
+      height: 32px
+
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%) scale(0)
+      transform-origin: 50% 0%
+      transition: $trs
+
+      @media (max-width: 990px)
+        display: none
+        // width: 100%
+        // height: 2px
+
+        // bottom: -32px
+        // top: auto
+        // transform: scale(0)
+    &--is-active, &:hover
+      opacity: 1
+      +tt(bold)
+      &::before
+        transform: translateY(-50%) scale(1)
+        @media (max-width: 990px)
+          transform: scale(1)
+  &__logout
+    @extend .profile__tab
+    margin-top: 72px
+    @media (max-width: 990px)
+      margin-top: 0
+
+  &__title
+    +tt(ex)
+    font-size: 24px
+    letter-spacing: 0.05em
+    margin-bottom: 32px
+
+    display: inline-block
+    position: relative
+    @media (min-width: 1900px)
+      font-size: 30px
+    &-num
+      position: absolute
+      top: -8px
+      right: 0
+      transform: translateX(100%)
+
+      +tt(bold)
+      font-size: 10px
+      letter-spacing: 0.1em
+      @media (min-width: 1900px)
+        font-size: 12px
+
+  &__subtitle
+    +tt(bold)
+    font-size: 14px
+    letter-spacing: 0.05em
+
+    margin-top: 80px
+    margin-bottom: 24px
+    @media (min-width: 1900px)
+      font-size: 16px
+  &__text
+    +tt(reg)
+    font-size: 14px
+    line-height: 24px
+    letter-spacing: 0.05em
+    margin-bottom: 46px
+    br
+      @media (min-width: 1880px)
+        display: none
+    @media (min-width: 1900px)
+      font-size: 16px
+    @media (max-width: 480px)
+      margin-bottom: 30px
+
+  // Content
+  &__container
+    padding-left: 14.5em
+    padding-top: 10.5em
+    padding-bottom: 8em
+    @media (max-width: 990px)
+      padding-left: 0
+    @media (max-width: 480px)
+      padding-bottom: 80px
+  &__block
+    width: 400px
+    display: none
+    @media (max-width: 480px)
+      width: 100%
+    .info-card
+      margin-bottom: 16px
+      &:last-child
+        margin-bottom: 0
+    &--orders
+      .cart
+        &__img-wrap
+          min-width: 80px
+          width: 80px
+          height: 122px
+        &__info
+          padding-left: 24px
+          flex-direction: column
+          justify-content: flex-start
+        &__amount
+          // font-size: 8px
+          margin-left: 12px
+          transform: translateY(2px)
+          &-icon
+            left: 80px
+        &__name, &__size, &__remove, &__recovery
+          font-size: 10px
+        &__price
+          // font-size: 12px
+        &__footer
+          justify-content: space-between
+        &__result
+          margin-top: 12px
+          min-width: auto
+          flex-direction: row
+          align-items: flex-start
+    &--profile
+      display: block
+    &--favorite
+      width: unset
+      max-width: 660px
+      margin-right: 32px
+      .profile__text
+        @media (max-width: 990px)
+          padding-right: 28px
+        @media (max-width: 480px)
+          padding-right: 0
+      @media (max-width: 990px)
+        max-width: 100%
+        width: 100%
+        margin-right: 0
+  &__add
+    +unbtn
+    margin-top: 8px
+
+    +tt(md)
+    color: #3f93ce
+    font-size: 14px
+    letter-spacing: 0.05em
+
+    transition: $trs
+    &:disabled
+      color: $black
+      opacity: 0.5
+  &__remove
+    letter-spacing: 0.05em
+    font-size: 14px
+    +tt(bold)
+    color: rgba($black, 0.5)
+    transition: $trs
+
+    +unbtn
+    align-self: flex-start
+    &:hover
+      color: $red
+  &__select
+    margin-bottom: 40px
+    &.ss-main .ss-single-selected
+      border-bottom: 2px solid #d6d6d2
+  .payment__label
+    +tt(md)
+    font-size: 12px
+    color: rgba($black, 0.5)
+
+    display: block
+    margin-bottom: 8px
+  &__orders
+    margin-top: 64px
+  &__order
+    margin-bottom: 48px
+    &:last-child
+      margin-bottom: 0
+    &-title
+      +tt(md)
+      font-size: 14px
+      letter-spacing: 0.05em
+      color: #bebebe
+
+      margin-bottom: 12px
+      display: block
+    &-list
+      +tt(md)
+      font-size: 14px
+      letter-spacing: 0.05em
+      color: $black
+      line-height: 24px
+      &-item
+
+  &__catalog
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+    flex-wrap: wrap
+    margin-left: -28px
+    @media (max-width: 990px)
+      width: 100%
+    @media (max-width: 480px)
+      justify-content: space-between
+      margin-left: 0
+    .catalog
+      &-item
+        // margin-right: 28px
+        width: 190px
+        max-width: 190px
+        min-width: 190px
+        @media (max-width: 480px)
+          margin-right: 0
+          min-width: calc(50% - 8px)
+          width: calc(50% - 8px)
+          padding-left: 0
+        &__name
+          margin-bottom: 16px
+        &__inner
+          padding-top: 290px
+          @media (max-width: 480px)
+            padding-top: 204px
+        &__size
+          display: none !important
+          visibility: hidden
+        &__info
+          flex-direction: column
+          justify-content: flex-start
+          height: auto
+
+    &--empty
+      opacity: 0.4
+
+
+
+.profile__content--empty
+  display: none

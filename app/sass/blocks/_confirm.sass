@@ -1,0 +1,106 @@
+.confirm
+  width: 100%
+  padding-top: 3.5em
+  padding-left: 8.5vw
+  padding-right: 8.5vw
+  padding-bottom: 9em
+
+  @media (max-width: 500px)
+    padding-left: 13%
+    padding-right: 13%
+
+  .cart__group
+    margin-bottom: 80px
+  &__delivery
+    margin-bottom: 56px
+  &__payment
+  &__title
+    position: relative
+    padding-bottom: 12px
+    margin-bottom: 24px
+
+    +tt(bold)
+    font-size: 14px
+    letter-spacing: 0.05em
+    &::before
+      content: ''
+      height: 2px
+      width: 100%
+      position: absolute
+      bottom: 0
+      left: 0
+      background: #e8e8e8
+  &__text
+    font-size: 14px
+    +tt(md)
+    letter-spacing: 0.05em
+    line-height: 1.71
+  &__edit
+    +unbtn
+    position: absolute
+    top: 0
+    right: 0
+    transition: $trs
+    &:hover
+      opacity: 0.5
+    .i-pencil
+      width: 12px
+      height: 12px
+
+
+.confirm-success
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  
+  padding: 24px 96px
+  
+  background: url(../img/pttrn.png) repeat
+  background-size: 8px
+  background-position: left top
+  @media (max-width: 500px)
+    padding: 20px 80px
+    width: 100%
+  &::before, &::after
+    content: ''
+    display: block
+    width: 28px
+    height: 28px
+    border-radius: 50%
+    background: #fff
+
+    position: absolute
+    top: 50%
+  &::before
+    left: -3px
+    transform: translate(-50%, -50%)
+  &::after
+    right: -3px
+    transform: translate(50%, -50%)
+  &__text
+    +tt(bold)
+    +f(18)
+    text-transform: uppercase
+    letter-spacing: 0.05em
+    text-align: center
+    position: relative
+    @media (max-width: 500px)
+      font-size: 12px
+    &::before, &::after
+      content: ''
+      display: block
+      width: 4px
+      height: 4px
+      border-radius: 50%
+      background: $black
+
+      position: absolute
+      top: 50%
+    &::before
+      left: -20px
+      transform: translate(-50%, -50%)
+    &::after
+      right: -20px
+      transform: translate(50%, -50%)
+

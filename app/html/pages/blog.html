@@ -1,0 +1,132 @@
+@include('../blocks/head.html')
+<!-- ./head -->
+
+
+@include('../blocks/preloader.html')
+
+<main class="main-wrapper">
+	@include('../blocks/header.html')
+
+	<section id="articles">
+		<div class="articles">
+
+			<!-- articles__aside -->
+			<div class="articles__aside">
+				<div class="section-header">
+					<div class="section-header__icons">
+						<div class="section-header__hexagon">
+							@include('../svg/hexagon.html')
+							<!-- hexagon-fill -->
+							@include('../svg/hexagon-fill.html')
+						</div>
+						<div class="section-header__line"></div>
+					</div>
+					<div>
+						<h2 class="section-header__title">Журнал.</h2>
+						<span class="section-header__link">Интересно о моде</span>
+					</div>
+				</div>
+			</div>
+			<!-- ./articles__aside -->
+
+			<!-- articles__content -->
+			<div class="articles__content">
+
+				<div class="article">
+					<div class="article__info">
+						<h3 class="article__title">
+							<a href="./article.html">Ася Резникова в Dior</a>
+						</h3>
+						<p class="article__text">Российская модель, которая сегодня стала звездой шоу модного Дома</p>
+						<span class="article__date">21 февраля</span>
+					</div>
+					<a class="article__img-wrap" href="./article.html">
+						<img class="article__img" src="img/articles/1.jpg" alt="Ася Резникова в Dior">
+					</a>
+				</div>
+				<div class="article">
+					<div class="article__info">
+						<h3 class="article__title">
+							<a href="./article.html">Larne SS/2018</a>
+						</h3>
+						<p class="article__text">Мы вдохновлялась эстетикой 60-х — отсюда платья из органзы, переработанный деним и дух сексуальной раскрепощенности</p>
+						<span class="article__date">16 февраля</span>
+					</div>
+					<a class="article__img-wrap" href="./article.html">
+						<img class="article__img" src="img/articles/2.jpg" alt="Larne SS/2018">
+					</a>
+				</div>
+				<div class="article">
+					<div class="article__info">
+						<h3 class="article__title">
+							<a href="./article.html">Юбка деловой женщины</a>
+						</h3>
+						<p class="article__text">Коктейль из тигровой лианы и листа ревеня в изумрудном сердце</p>
+						<span class="article__date">16 февраля</span>
+					</div>
+					<a class="article__img-wrap" href="./article.html">
+						<img class="article__img" src="img/articles/3.jpg" alt="Юбка деловой женщины">
+					</a>
+				</div>
+				<div class="article">
+					<div class="article__info">
+						<h3 class="article__title">
+							<a href="./article.html">Лучшие роли Элизабет Тэйлор</a>
+						</h3>
+						<p class="article__text">В честь королевы Голливуда, которой сегодня исполнилось бы 86</p>
+						<span class="article__date">11 февраля</span>
+					</div>
+					<a class="article__img-wrap" href="./article.html">
+						<img class="article__img" src="img/articles/4.jpg" alt="Лучшие роли Элизабет Тэйлор">
+					</a>
+				</div>
+
+				<!-- pagination -->
+				<ul class="pagination">
+					<li class="pagination__item">
+						<a class="pagination__link pagination__link--current" href="./blog.html">1</a>
+					</li>
+					<li class="pagination__item">
+						<a class="pagination__link" href="./blog.html">2</a>
+					</li>
+					<li class="pagination__item">
+						<a class="pagination__link" href="./blog.html">3</a>
+					</li>
+					<li class="pagination__item">
+						<a class="pagination__link" href="./blog.html">4</a>
+					</li>
+					<li class="pagination__item">
+						<a class="pagination__link" href="./blog.html">5</a>
+					</li>
+				</ul>
+				<!-- ./pagination -->
+			</div>
+			<!-- ./articles__content -->
+
+		</div>
+
+	</section>
+</main>
+
+
+<!-- menu -->
+@include('../blocks/menu.html')
+<!-- help -->
+@include('../blocks/help.html')
+<!-- checkout -->
+@include('../blocks/checkout.html')
+<!-- reg -->
+@include('../blocks/reg.html')
+<!-- recovery -->
+@include('../blocks/recovery.html')
+<!-- login -->
+@include('../blocks/login.html')
+<!-- search -->
+@include('../blocks/search.html')
+<!-- subscribe -->
+@include('../blocks/subscribe.html')
+
+<script defer src="js/blog.js"></script>
+
+<!-- footer -->
+@include('../blocks/footer.html')

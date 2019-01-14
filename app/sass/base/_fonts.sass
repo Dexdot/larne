@@ -1,0 +1,101 @@
+// TT Norms
+
+@font-face
+  font-family: 'TT Norms'
+  src: url('../fonts/tt/TTNorms-Regular.woff2') format('woff2'),url('../fonts/tt/TTNorms-Regular.woff') format('woff')
+  font-style: normal
+  font-weight: 400
+  font-display: swap
+
+@font-face
+  font-family: 'TT Norms'
+  src: url('../fonts/tt/TTNorms-Medium.woff2') format('woff2'),url('../fonts/tt/TTNorms-Medium.woff') format('woff')
+  font-style: normal
+  font-weight: 500
+  font-display: swap
+
+@font-face
+  font-family: 'TT Norms'
+  src: url('../fonts/tt/TTNorms-ExtraBold.woff2') format('woff2'),url('../fonts/tt/TTNorms-ExtraBold.woff') format('woff')
+  font-style: normal
+  font-weight: 800
+  font-display: swap
+
+@font-face
+  font-family: 'TT Norms'
+  src: url('../fonts/tt/TTNorms-Bold.woff2') format('woff2'),url('../fonts/tt/TTNorms-Bold.woff') format('woff')
+  font-style: normal
+  font-weight: 700
+  font-display: swap
+
+@font-face
+  font-family: 'TT Norms'
+  src: url('../fonts/tt/TTNorms-Black.woff2') format('woff2'),url('../fonts/tt/TTNorms-Black.woff') format('woff')
+  font-style: normal
+  font-weight: 900
+  font-display: swap
+
+=tt($weight)
+	@if $weight == reg
+		font-family: 'TT Norms', sans-serif
+		font-weight: 400
+	@if $weight == md
+		font-family: 'TT Norms', sans-serif
+		font-weight: 500
+	@if $weight == bold
+		font-family: 'TT Norms', sans-serif
+		font-weight: 700
+	@if $weight == ex
+		font-family: 'TT Norms', sans-serif
+		font-weight: 800
+	@if $weight == bl
+		font-family: 'TT Norms', sans-serif
+		font-weight: 900
+
+
+// Cormorant
+@font-face
+  font-family: 'Cormorant'
+  src: url('../fonts/cormorant/Cormorant-Medium.woff2') format('woff2'),url('../fonts/cormorant/Cormorant-Medium.woff') format('woff')
+  font-style: normal
+  font-weight: 500
+  font-display: swap
+
+@font-face
+  font-family: 'Cormorant'
+  src: url('../fonts/cormorant/Cormorant-MediumItalic.woff2') format('woff2'),url('../fonts/cormorant/Cormorant-MediumItalic.woff') format('woff')
+  font-style: italic
+  font-weight: 500
+  font-display: swap
+
+@font-face
+  font-family: 'Cormorant'
+  src: url('../fonts/cormorant/Cormorant-Bold.woff2') format('woff2'),url('../fonts/cormorant/Cormorant-Bold.woff') format('woff')
+  font-style: normal
+  font-weight: 700
+  font-display: swap
+
+@font-face
+  font-family: 'Cormorant'
+  src: url('../fonts/cormorant/Cormorant-BoldItalic.woff2') format('woff2'),url('../fonts/cormorant/Cormorant-BoldItalic.woff') format('woff')
+  font-style: italic
+  font-weight: 700
+  font-display: swap
+
+=corm($weight)
+	@if $weight == md
+		font-family: 'Cormorant', sans-serif
+		font-weight: 500
+    font-style: normal
+	@if $weight == mdit
+		font-family: 'Cormorant', sans-serif
+		font-weight: 500
+    font-style: italic
+	@if $weight == bold
+    font-family: 'Cormorant', sans-serif
+    font-style: normal
+    font-weight: 700
+	@if $weight == boldit
+    font-family: 'Cormorant', sans-serif
+    font-style: italic
+    font-weight: 700

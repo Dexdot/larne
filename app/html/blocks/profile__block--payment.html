@@ -1,0 +1,97 @@
+<div class="profile__block profile__block--payment">
+
+  <!-- profile__content -->
+  <div class="profile__content">
+    <h2 class="profile__title">Способ оплаты</h2>
+    <button class="info-card" data-profile="payment">
+      <span class="info-card__title">Mastercard</span>
+      <span class="info-card__subtitle">**** **** **** 8800</span>
+      <span class="info-card__subtitle">Anastasia Medinskaya</span>
+      @include('../svg/arrow-down.html')
+    </button>
+    <button class="info-card" data-profile="payment">
+      <span class="info-card__title">Яндекс-кошелек</span>
+      <span class="info-card__subtitle">4100133165****</span>
+      <span class="info-card__subtitle">Анастасия Мединская</span>
+      @include('../svg/arrow-down.html')
+    </button>
+    <button class="profile__add profile__add--payment" data-profile="payment">Добавить способ оплаты</button>
+  </div>
+  <!-- ./profile__content -->
+
+  <!-- profile__content--empty -->
+  <div class="profile__content profile__content--empty">
+    <h2 class="profile__title">Способ оплаты</h2>
+    <button class="info-card info-card--empty" data-profile="payment">
+      <span class="info-card__title">Добавить способ оплаты</span>
+      @include('../svg/plus.html')
+    </button>
+  </div>
+  <!-- ./profile__content--empty -->
+
+  <!-- profile-form -->
+  <div class="profile-form">
+    <button class="profile-form__overlay"></button>
+    <form class="profile-form__form">
+      <button class="profile-form__close" type="button">
+        @include('../svg/arrow-circle.html')
+      </button>
+      <div class="profile-form__content">
+        <span class="profile-form__title">Изменить способ</span>
+
+        <span class="payment__label">Тип</span>
+
+        <select class="select profile__select" name="payment-type">
+          <option value="bank">Банковская карта</option>
+          <option value="yandex">Яндекс-деньги</option>
+          <option value="qiwi">Qiwi-кошелек</option>
+          <option value="webmoney">WebMoney</option>
+        </select>
+
+        <div class="input input--lock">
+          <label class="input__label">
+            <input class="input__field" type="text" required placeholder="Номер кошелька">
+          </label>
+          <span class="input__tip input__tip--danger">Заполните поле</span>
+          @include('../svg/lock.html')
+        </div>
+
+        <div class="credit-card-wrap">
+          <div class="credit-card input--lock">
+            @include('../svg/card.html')
+            <!-- mastercard -->
+            @include('../svg/mastercard.html')
+            <!-- visa -->
+            @include('../svg/visa.html')
+            <!-- mir -->
+            @include('../svg/mir.html')
+            <!-- lock -->
+            @include('../svg/lock.html')
+            <input class="credit-card__number" type="text" required autocomplete="cc-number" name="cc-number" placeholder="Номер карты"
+              maxlength="22">
+
+            <div class="input-row">
+              <input class="credit-card__expiry" type="text" required autocomplete="cc-exp" name="cc-exp" placeholder="ММ/ГГ">
+
+              <input class="credit-card__csc" type="text" required autocomplete="cc-csc" name="cc-csc" placeholder="CCV" maxlength="3">
+            </div>
+
+          </div>
+        </div>
+
+        <div class="input">
+          <label class="input__label">
+            <input class="input__field" type="text" required placeholder="Имя">
+          </label>
+          <span class="input__tip input__tip--danger">Заполните поле</span>
+        </div>
+
+        <button class="profile__remove profile__remove--payment" type="button">Удалить</button>
+
+      </div>
+      <button class="btn btn--lg profile-form__btn profile-form__btn--payment" type="submit">Сохранить</button>
+    </form>
+  </div>
+  <!-- ./profile-form -->
+
+</div>

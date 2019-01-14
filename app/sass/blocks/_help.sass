@@ -1,0 +1,180 @@
+.help
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 3
+  background: #f8f8f8
+  width: 100%
+  height: 100%
+
+  transition: $trs-forhims-6
+  transform: translateY(150%)
+
+  @media (max-width: 760px)
+    +scrollbar
+
+  .header
+    padding-bottom: 50px
+    background: #fff
+    @media (max-width: 480px)
+      padding-bottom: 25px
+  &--is-visible
+    transform: translateY(0)
+  &__container
+    padding-left: calc(5.5% + 14.5em)
+    padding-right: 5.5%
+    padding-top: 7.75em
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+    justify-content: space-between
+    @media (max-width: 1120px)
+      padding-left: calc(5.5% + 12.5em)
+    @media (max-width: 990px)
+      padding-left: 5.5%
+    @media (max-width: 760px)
+      flex-direction: column
+      align-items: stretch
+      justify-content: flex-start
+      padding-top: 32px
+
+  &__close
+    +unbtn
+    position: absolute
+    right: 5.5%
+    top: 10em
+    @media (max-width: 760px)
+      top: calc(1.5em + 100px + 40px)
+    @media (max-width: 480px)
+      top: calc(1.5em + 50px + 40px)
+      right: 5%
+  &__content
+    max-width: 40vw
+    padding-right: 60px
+    flex: 1
+    height: 80vh
+    overflow-y: auto
+
+    color: rgba(0, 0, 0, 0)
+    text-shadow: 0 0 $black
+    transition: color .3s ease-out
+    @media (max-width: 990px)
+      max-width: 60vw
+    @media (max-width: 760px)
+      max-width: unset
+      overflow-y: unset
+    @media (max-width: 480px)
+      padding-right: 0
+    &::-webkit-scrollbar
+      width: 4px
+      height: 4px
+      &-thumb
+        box-shadow: inset 0 0 0 10px
+    &.show-bar
+      color: rgba(0, 0, 0, 0.1)
+
+    h2
+      +f(30)
+      +tt(bold)
+      letter-spacing: 0.05em
+      @media (max-width: 480px)
+        font-size: 24px
+        +tt(ex)
+    h3
+      +tt(bold)
+      font-size: 18px
+      letter-spacing: 0.05em
+    p
+      font-size: 14px
+      line-height: 1.85
+      letter-spacing: 0.05em
+      margin-top: 48px
+      margin-bottom: 48px
+      @media (max-width: 480px)
+        margin-top: 40px
+        margin-bottom: 40px
+    ol
+      list-style: none
+      padding: 0
+      & > li
+        position: relative
+        padding-left: 72px
+        @media (max-width: 480px)
+          padding-left: 32px
+        span
+          position: absolute
+          top: 4px
+          left: 0
+          font-size: 14px
+          letter-spacing: 0.05em
+    ul
+      padding: 0
+      & > li
+        font-size: 14px
+        line-height: 1.85
+        letter-spacing: 0.05em
+        margin-bottom: 10px
+        &:last-child
+          margin-bottom: 0
+        position: relative
+        padding-left: 32px
+        &::before
+          content: ''
+          width: 8px
+          height: 8px
+          display: block
+          background: $black
+          position: absolute
+          top: 8px
+          left: 0
+          transform: rotate(45deg)
+    display: none
+    &:first-child
+      display: block
+
+  &__select
+    width: calc(100% - 48px)
+    margin-bottom: 80px
+    text-transform: uppercase
+    &.select
+      +tt(bold)
+      font-size: 12px
+      letter-spacing: 0.1em
+      @media (max-width: 480px)
+        font-size: 10px
+    .ss-single-selected,
+    .ss-content,
+    .ss-content .ss-list .ss-option.ss-disabled
+      background: #f8f8f8
+
+    display: none
+    @media (max-width: 760px)
+      display: block
+  &__tabs
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+    min-width: 276px
+    width: 276px
+    @media (max-width: 1120px)
+      min-width: 210px
+      width: 210px
+    @media (max-width: 760px)
+      display: none
+  &__tab
+    +unbtn
+    +tt(bold)
+    font-size: 10px
+    letter-spacing: 0.01em
+    text-transform: uppercase
+    opacity: 0.5
+    margin-bottom: 24px
+    &--is-active
+      opacity: 1
+    &--mb
+      margin-bottom: 56px
+    &:last-child
+      margin-bottom: 0
+  
+  

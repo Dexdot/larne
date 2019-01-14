@@ -1,0 +1,156 @@
+  
+.footer
+  margin-top: auto
+  padding-bottom: 34px
+  &__inner
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+  &__left
+    width: 50%
+    display: flex
+    align-items: stretch
+    justify-content: flex-start
+  &__share
+    position: relative
+    width: 16px
+    height: 16px
+    +unbtn
+
+    transition: $trs
+    &:hover
+      opacity: 0.5
+    // .i-share
+    //   position: absolute
+    //   top: 50%
+    //   left: 50%
+    //   transform: translate(-50%, -50%)
+    .i-instagram
+      width: 14px
+      height: 14px
+      stroke-width: 2px
+  &__list
+    display: flex
+    padding-left: 6.2em
+    height: 100%
+    &-item
+      height: 100%
+      &:first-child .footer__btn
+        margin-left: 0
+      @media (max-width: 855px)
+        margin-bottom: 24px
+      &:last-child
+        @media (max-width: 855px)
+          margin-bottom: 48px
+    @media (max-width: 855px)
+      padding-left: 0
+      flex-direction: column
+  &__btn
+    display: inline-block
+    vertical-align: top
+    letter-spacing: 0.05em
+    text-transform: uppercase
+    font-size: 10px
+    +tt(bold)
+    +unbtn
+    margin-left: 3.2em
+    @media (min-width: 1900px)
+      font-size: 11px
+    @media (max-width: 855px)
+      margin-left: 0
+    +underline
+  &__down
+    +unbtn
+    position: relative
+    width: 20px
+    height: 20px
+    animation: arrow-down 2s ease-in-out infinite
+    animation-direction: alternate
+    .i-down
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      
+  &__copyright
+    letter-spacing: 0.05em
+    text-transform: uppercase
+    font-size: 10px
+    +tt(bold)
+    @media (min-width: 1900px)
+      font-size: 11px
+    @media (max-width: 855px)
+      margin-bottom: 48px
+      display: block
+  &__dev
+    letter-spacing: 0.05em
+    text-transform: uppercase
+    font-size: 10px
+    color: $black
+    +tt(bold)
+    &:visited
+      color: $black
+    &-name
+      +tt(ex)
+    @media (min-width: 1900px)
+      font-size: 11px
+
+  // По дефолту стрелка спрятана, копирайты видны
+  &__down
+    display: none
+  &__copyright
+    margin-right: auto
+
+  &__row
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    width: 100%
+
+  // Стрелка видна по центру, копирайты спрятаны
+  &--no-copyright
+    .footer
+      &__copyright, &__dev
+        display: none
+      &__down
+        margin-right: auto
+        display: block
+  @media (max-width: 855px)
+    display: none
+
+  &--last
+    transition: $trs
+    &.footer--up
+      transform: translateY(-56px) 
+
+  // Футер на мобиле (в колонку)
+  &--mob
+    display: none
+    padding-top: 40px
+    border-top: 1px solid #e8e8e8
+    @media (max-width: 855px)
+      display: block 
+
+  // Белые элементы
+  &--white
+    color: #ffffff
+    .footer__dev
+      color: #fff
+      &:visited
+        color: #fff
+
+.mob section .footer
+  display: none
+
+// Футер после инста
+.page-main
+  .footer--last
+    display: none
+
+// Анимация галки вниз
+@keyframes arrow-down
+  100%
+    transform: translateY(12px)
+
+

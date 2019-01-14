@@ -1,0 +1,219 @@
+#hero
+  height: 100vh
+  position: relative
+  overflow: hidden
+  .footer
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 1
+  .header
+    position: relative
+    z-index: 1
+.hero
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  left: 0
+  right: 0
+  @media (max-width: 480px)
+    height: 100%
+    display: flex
+    flex-direction: row
+    align-items: center
+  &__title
+    +f(96)
+    +tt(md)
+    line-height: 1
+    position: relative
+    margin-bottom: 0.135em
+    @media (min-width: 1900px)
+      font-size: 8rem
+    @media (max-width: 480px)
+      font-size: 48px
+      letter-spacing: 0.025em
+      padding-left: 6px
+    &-num
+      +tt(bl)
+      font-size: 10px
+      position: absolute
+      top: -10px
+      left: -6px
+      transform: rotate(-90deg)
+      @media (min-width: 1900px)
+        font-size: 11px
+  &__subtitle
+    color: $black
+    &:focus,
+    &:visited,
+    &:active
+      color: $black
+
+    +tt(bold)
+    font-size: 10px
+    text-transform: uppercase
+    @media (min-width: 1900px)
+      font-size: 11px
+    @media (max-width: 480px)
+      font-size: 8px
+      letter-spacing: 0.05em
+  &__content
+    display: flex
+    flex-direction: column
+    padding-left: calc(14.5em + 26px)
+    justify-content: center
+    @media (max-width: 720px)
+      padding-left: 6em
+    @media (max-width: 480px)
+      transform: translateY(-60%)
+      padding-left: 0
+  &__inner
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+  &__toggle
+    +unbtn
+    position: relative
+    margin-left: auto
+    border-radius: 50%
+    width: 104px
+    height: 104px
+    display: flex
+    align-items: center
+    justify-content: center
+    &:hover
+      .hero__icon
+        transform: scale(1.3)
+
+    @media (max-width: 480px)
+      position: absolute
+      left: 16px
+      bottom: 16vh
+      width: 88px
+      height: 88px
+  .i-dotted
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+    animation: rotate 20s linear 0s infinite
+    animation-fill-mode: backwards
+  &__icon
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+    transition: 0.8s ease-in-out
+    border-radius: 50%
+  &__icon-wrap
+    width: 80px
+    height: 80px
+    position: relative
+    border-radius: 50%
+    overflow: hidden
+    display: none
+    @media (max-width: 480px)
+      width: 64px
+      height: 64px
+  .fluid
+    @media (max-width: 480px)
+      margin: 0
+
+@keyframes rotate
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+
+// Слайдер
+#hero
+  &.light
+    color: #fff
+    .hero__subtitle
+      color: #fff
+      &:focus,
+      &:visited,
+      &:active
+        color: #fff
+    .header__link, .header__phone
+      color: #fff
+      +tt(md)
+    .header__link::after, .footer__btn::after
+      background: #ffffff
+    .i-dotted,.i-instagram
+      stroke: #fff
+    .hero__title-num
+      +tt(bold)
+    .i-logo, .i-hexagon, .i-down
+      fill: #fff
+    .header__cart--fill
+      .i-hexagon-fill
+        fill: #fff
+      .header__cart-num
+        color: $black
+
+    .header__name
+      color: #fff
+      &:focus,
+      &:visited,
+      &:active
+        color: #fff
+    
+    .header--catalog-drop
+      .i-search
+        stroke: $black
+      .header__link, .header__phone, .header__login, .header__cart-num
+        color: $black
+        +tt(bold)
+      .header__link::after
+        background: $black
+      .i-logo, .i-hexagon
+        fill: $black
+      .header__cart--fill
+        .i-hexagon-fill
+          fill: $black
+        .header__cart-num
+          color: #fff
+
+
+.hero
+  &__content-block
+    display: none
+  &-image
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+    display: none
+    &:nth-child(1)
+      @media (max-width: 480px)
+        background-position: 70% center
+    &:nth-child(3)
+      @media (max-width: 480px)
+        background-position: 40% center
+  &-cover
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: #ffffff
+    transform: translateX(100%)
+    z-index: 2
+    &.z1
+      z-index: 1
+
+
+

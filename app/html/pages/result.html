@@ -1,0 +1,130 @@
+@include('../blocks/head.html')
+<!-- ./head -->
+
+
+@include('../blocks/preloader.html')
+
+<main class="main-wrapper">
+	@include('../blocks/header.html')
+	<div class="fluid">
+
+		<div class="catalog">
+
+			<!-- catalog__top -->
+			<div class="catalog__top">
+				<h1 class="catalog__title">
+					Платья
+					<span class="catalog__title-num">08</span>
+				</h1>
+				<div class="catalog__controls">
+					<button class="catalog__btn catalog__btn--filter">
+						@include('../svg/more.html') Фильтр
+					</button>
+					<span class="catalog__slash">/</span>
+					<button class="catalog__btn catalog__btn--sort">
+						Сортировка
+					</button>
+					<div class="sort">
+						<span class="sort__btn">По возрастанию цены</span>
+						<span class="sort__btn">По убыванию цены</span>
+					</div>
+				</div>
+			</div>
+			<!-- ./catalog__top -->
+
+			<!-- catalog__list -->
+			<div class="catalog__list">
+
+				<div class="grid-sizer"></div>
+
+				<!-- item -->
+				@include('../blocks/catalog-item.html')
+				<!-- item-sale -->
+				@include('../blocks/catalog-item-sale.html')
+				<!-- item -->
+				@include('../blocks/catalog-item.html')
+				<!-- item-sale -->
+				@include('../blocks/catalog-item-sale.html')
+				<!-- item -->
+				@include('../blocks/catalog-item.html')
+				<!-- item-sale -->
+				@include('../blocks/catalog-item-sale.html')
+				<!-- item-banner -->
+				@include('../blocks/catalog-item-lg.html')
+				<!-- item -->
+				@include('../blocks/catalog-item.html')
+				<!-- item-sale -->
+				@include('../blocks/catalog-item-sale.html')
+				<!-- item -->
+				@include('../blocks/catalog-item.html')
+				<!-- item-sale -->
+				@include('../blocks/catalog-item-sale.html')
+				<!-- item -->
+				@include('../blocks/catalog-item.html')
+				<!-- item-sale -->
+				@include('../blocks/catalog-item-sale.html')
+				<!-- item-banner -->
+				@include('../blocks/catalog-item-banner.html')
+				<!-- item -->
+				@include('../blocks/catalog-item.html')
+				<!-- item-sale -->
+				@include('../blocks/catalog-item-sale.html')
+				<!-- item -->
+				@include('../blocks/catalog-item.html')
+				<!-- item-sale -->
+				@include('../blocks/catalog-item-sale.html')
+				<!-- item -->
+				@include('../blocks/catalog-item.html')
+				<!-- item-sale -->
+				@include('../blocks/catalog-item-sale.html')
+
+			</div>
+			<!-- ./catalog__list -->
+
+		</div>
+
+		<div class="catalog">
+
+			<!-- catalog__top -->
+			<div class="catalog__top">
+				<h1 class="catalog__title">
+					Платья
+					<span class="catalog__title-num">00</span>
+				</h1>
+			</div>
+			<h2 class="catalog__subtitle">— Ничего не найдено. Попробуйте другой запрос или посмотрите наши
+				<a href="./catalog.html">новинки</a>
+			</h2>
+			<!-- ./catalog__top -->
+		</div>
+
+	</div>
+	<!-- instagram -->
+	@include('../blocks/instagram.html')
+</main>
+
+<!-- filter -->
+@include('../blocks/filter.html')
+
+<!-- menu -->
+@include('../blocks/menu.html')
+<!-- help -->
+@include('../blocks/help.html')
+<!-- checkout -->
+@include('../blocks/checkout.html')
+<!-- reg -->
+@include('../blocks/reg.html')
+<!-- recovery -->
+@include('../blocks/recovery.html')
+<!-- login -->
+@include('../blocks/login.html')
+<!-- search -->
+@include('../blocks/search.html')
+<!-- subscribe -->
+@include('../blocks/subscribe.html')
+
+<script defer src="js/masonry.js"></script>
+<script defer src="js/catalog.js"></script>
+
+<!-- footer -->
+@include('../blocks/footer.html')

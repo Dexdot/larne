@@ -1,0 +1,64 @@
+.page-main
+  #instagram
+    justify-content: flex-end
+    min-height: 100vh
+#instagram
+  display: flex
+  flex-direction: column
+  margin-bottom: 40px
+  @media (max-width: 855px)
+    margin-bottom: 0
+  .header
+    margin-bottom: auto
+  .section-header
+    margin-top: 144px
+  .fluid
+    margin-left: 0
+.instagram
+  display: flex
+  flex-direction: row
+  align-items: stretch
+  justify-content: space-between
+  flex-wrap: wrap
+  margin-top: 64px
+  // margin-bottom: 40px
+  &__box
+    position: relative
+    min-width: 16.66%
+    padding-top: 16.67%
+    flex: 1
+    overflow: hidden
+    &:hover
+      .instagram__img
+        transform: scale(1.1)
+      .gallery__link
+        opacity: 1
+    @media (max-width: 1200px)
+      min-width: 25%
+      padding-top: 25%
+    @media (max-width: 855px)
+      min-width: 33%
+      padding-top: 33%
+    @media (max-width: 480px)
+      min-width: 50%
+      padding-top: 50%
+  &__img
+    transition: $trs-img
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+  @media (max-width: 855px)
+    margin-bottom: 0
+  @media (max-width: 480px)
+    margin-top: 52px
+
+.mob
+  #instagram
+    .section-header
+      @media (max-width: 480px)
+        margin-top: 64px
+

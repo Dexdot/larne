@@ -1,0 +1,79 @@
+@include('../blocks/head.html')
+<!-- ./head -->
+
+@include('../blocks/preloader.html')
+
+<main class="main-wrapper">
+	@include('../blocks/header.html')
+	<div class="fluid">
+
+		<!-- notfound -->
+		<div class="notfound">
+			<div class="notfound__tip">
+				Ошибка
+				<br>
+				<b>404</b>
+			</div>
+			<div class="notfound__inner">
+				<h1 class="notfound__title">Страница не найдена</h1>
+				<br>
+				<p class="notfound__subtitle">
+					Возможно она переехала, ее больше нет на сайте или Вам просто нравится изучать 404 страницы. Выберите нужный раздел
+					<a href="./catalog.html">
+						<b>каталога</b>
+					</a>
+					ниже или воспользуйтесь
+					<span class="notfound__search">
+						<b>поиском</b>
+					</span>
+				</p>
+			</div>
+		</div>
+		<!-- ./notfound -->
+
+		<!-- notfound__banners -->
+		<div class="notfound__banners">
+
+			<div class="notfound__banner">
+				<a href="./catalog.html">
+					<div class="gallery__img-wrap">
+						<img src="img/gallery/lg1.jpg" alt="Каталог" class="gallery__img">
+					</div>
+				</a>
+			</div>
+			<div class="notfound__banner">
+				<a href="./catalog.html">
+					<div class="gallery__img-wrap">
+						<img src="img/gallery/lg3.jpg" alt="Каталог" class="gallery__img">
+					</div>
+				</a>
+			</div>
+
+		</div>
+		<!-- ./notfound__banners -->
+
+		@include('../blocks/gallery.html')
+	</div>
+</main>
+
+<!-- menu -->
+@include('../blocks/menu.html')
+<!-- help -->
+@include('../blocks/help.html')
+<!-- checkout -->
+@include('../blocks/checkout.html')
+<!-- reg -->
+@include('../blocks/reg.html')
+<!-- recovery -->
+@include('../blocks/recovery.html')
+<!-- login -->
+@include('../blocks/login.html')
+<!-- search -->
+@include('../blocks/search.html')
+<!-- subscribe -->
+@include('../blocks/subscribe.html')
+
+<script defer src="js/notfound.js"></script>
+
+<!-- footer -->
+@include('../blocks/footer.html')

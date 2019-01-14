@@ -1,0 +1,81 @@
+<div class="mysize">
+  <button class="mysize__overlay"></button>
+  <form class="mysize__form">
+
+    <!-- mysize__content -->
+    <div class="mysize__content">
+      <button class="mysize__close" type="button">
+        @include('../svg/arrow-circle.html')
+      </button>
+      <span class="mysize__title">Заказ по личным меркам</span>
+      <p class="mysize__subtitle">Введите результаты замеров поверх нижнего белья и закажите
+        <br> размер вашей мечты</p>
+
+      <!-- mysize-list -->
+      <ul class="mysize-list">
+        <li class="mysize-list__item">
+          <span class="mysize-list__title">Грудь</span>
+          <div class="mysize-list__btm">
+            <p class="mysize-list__text">Снимается по самым выступающим точкам груди на уровне подмышек</p>
+
+            <div class="input mysize-list__input">
+              <label class="input__label">
+                <input class="input__field" type="text" required placeholder="84">
+              </label>
+              <span class="input__tip input__tip--danger">Заполните поле</span>
+            </div>
+
+          </div>
+        </li>
+        <li class="mysize-list__item">
+          <span class="mysize-list__title">Талия</span>
+          <div class="mysize-list__btm">
+            <p class="mysize-list__text">Горизонтально в самом узком месте, плотно обхватив талию</p>
+
+            <div class="input mysize-list__input">
+              <label class="input__label">
+                <input class="input__field" type="text" required placeholder="66">
+              </label>
+              <span class="input__tip input__tip--danger">Заполните поле</span>
+            </div>
+
+          </div>
+        </li>
+        <li class="mysize-list__item">
+          <span class="mysize-list__title">Бедра</span>
+          <div class="mysize-list__btm">
+            <p class="mysize-list__text">Измерьте горизонтально по самым выпуклым точкам ягодиц</p>
+
+            <div class="input mysize-list__input">
+              <label class="input__label">
+                <input class="input__field" type="text" required placeholder="94">
+              </label>
+              <span class="input__tip input__tip--danger">Заполните поле</span>
+            </div>
+
+          </div>
+        </li>
+      </ul>
+      <!-- ./mysize-list -->
+
+      <div class="play-video-wrap">
+        <button class="play-video" type="button">
+          @include('../svg/play.html')
+          <span class="play-video__title">Как правильно снимать мерки</span>
+          <span class="play-video__info">Youtube — 1:44</span>
+        </button>
+      </div>
+
+      <div class="input">
+        <label class="input__label">
+          <input class="input__field" type="text" required placeholder="Комментарий к заказу">
+        </label>
+        <span class="input__tip input__tip--danger">Заполните поле</span>
+      </div>
+
+    </div>
+    <!-- ./mysize__content -->
+
+    <button class="btn btn--lg mysize__btn" type="submit">Перейти к оформлению заказа</button>
+  </form>
+</div>

@@ -1,0 +1,365 @@
+
+.gallery
+  margin-top: 8.75em
+  margin-bottom: calc(8.75em - 28px)
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+
+  &__half
+    width: calc(50% - 14px)
+    display: flex
+    align-items: flex-start
+    flex-wrap: wrap
+    justify-content: space-between
+    @media (max-width: 855px)
+      width: 100%
+      
+    &:first-child
+      .gallery__item
+        &:nth-child(3)
+          @media (max-width: 855px)
+            order: -1
+
+        // Изменил селектор 19.11
+        &:last-child:not(.gallery__item--mailing)
+        // &:last-child
+          @media (max-width: 480px)
+            display: none
+
+    &:last-child
+      & > .gallery__card:last-child,
+      & > .gallery__item:nth-last-child(2)
+        @media (max-width: 480px)
+          display: none
+
+  &__item
+    position: relative
+    width: calc(50% - 14px)
+    padding-top: calc(50% - 14px)
+    margin-bottom: 28px
+    @media (max-width: 480px)
+      width: calc(50% - 8px)
+      padding-top: calc(50% - 8px)
+      margin-bottom: 16px
+
+    // Ширина 100%
+    &--lg
+      width: 100%
+      padding-top: 100%
+      .gallery__img-wrap:hover .gallery__img
+        transform: unset
+      @media (max-width: 480px)
+        width: 100%
+        padding-top: 100%
+    
+    &--card, &--gift
+      &:hover
+        & .gallery__img-wrap > .gallery__img
+          transform: scale(1.1)
+
+    &--gift
+      @media (max-width: 480px)
+        display: none
+          
+    // Закомментил 19.11
+    // &--card
+    //   @media (max-width: 480px)
+    //     margin-bottom: 0
+
+    // Рассылка
+    &--mailing
+      padding-top: 100%
+
+      // Закомментировано 14.12.18
+      // @media (min-width: 1650px)
+      //   padding-top: calc(50% - 14px)
+      @media (max-width: 855px)
+        padding-top: calc(65% - 14px)
+      @media (max-width: 630px)
+        padding-top: 384px
+      @media (max-width: 480px)
+        width: 100%
+        padding-top: 486px
+
+    // Товар
+    &--product
+      padding-top: 63.5%
+      // padding-top: 27.7vw
+      .gallery__link
+        background: transparent
+        color: transparent
+        & *
+          opacity: 0
+      @media (max-width: 960px)
+        padding-top: 50%
+      @media (max-width: 480px)
+        width: 100%
+        padding-top: 486px
+        & + .gallery__item
+          display: flex
+          flex-direction: row
+          justify-content: space-between
+          width: 100%
+          margin-top: 97px
+          .gallery__item
+            padding-top: calc(50% - 8px)
+            width: calc(50% - 8px)
+            margin-bottom: 0
+
+    // Пустой блок - заполнитель
+    &--placeholder
+      opacity: 0
+      pointer-events: none
+      @media (max-width: 855px)
+        display: none
+
+    // Сетка 1:2
+    &--row
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: flex-start
+      width: 100%
+      .gallery__img-wrap:hover .gallery__img
+        transform: scale(1.1) translateZ(0)
+      @media (max-width: 480px)
+        flex-wrap: wrap
+        align-items: center
+
+      // Добавил 19.11
+      & > .gallery__item
+        @media (max-width: 480px)
+          width: 100%
+
+    // Без нижнего марджина
+    &--no-mb
+      margin-bottom: 0
+      @media (max-width: 480px)
+        margin-bottom: 0
+
+      // Добавил 19.11
+      &:last-child
+        @media (max-width: 480px)
+          margin-bottom: 16px
+
+    // Без верхнего пэддинга
+    &--no-pt
+      padding-top: unset
+      @media (max-width: 480px)
+        padding-top: unset
+
+  &__img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    pointer-events: none
+    transition: $trs-img
+
+    position: absolute
+    top: 0
+    left: 0
+  &__img-wrap
+    overflow: hidden
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+    &:hover
+      .gallery__link
+        opacity: 1
+      .gallery__img
+        transform: scale(1.1) translateZ(0)
+
+  &__link
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+    transition: $trs
+    background: rgba(#101010, 0.34)
+
+    // text-transform: uppercase
+    // font-size: 10px
+    // +tt(reg)
+    // color: #fff
+
+    opacity: 0
+    .i-instagram
+      stroke: #fff
+      // margin-bottom: 15px
+  
+  @media (max-width: 855px)
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+  @media (max-width: 480px)
+    margin-top: 64px
+    margin-bottom: 64px
+
+.mob .gallery
+  @media (max-width: 480px)
+    margin-bottom: 16px
+
+// Белая карточка в большом блоке
+.gallery__card
+  position: absolute
+  bottom: 0
+  max-width: 67%
+  padding: 4em
+  background: #ffffff
+  transition: background 0.4s ease-in-out
+  &--left
+    left: 0
+  &--right
+    right: 0
+  &-title
+    +tt(bold)
+    +f(24)
+    @media (max-width: 480px)
+      font-size: 18px
+  &-text
+    opacity: 0.5
+    font-size: 14px
+    +tt(reg)
+    line-height: 1.57
+    margin-top: 1.71em
+    margin-bottom: 2.285em
+    @media (max-width: 480px)
+      margin-top: 24px
+      margin-bottom: 24px
+  &-link
+    font-size: 10px
+    text-transform: uppercase
+    +tt(bold)
+    color: $black
+    &:visited, &:active, &:focus
+      color: $black
+    position: relative
+    &::before
+      content: ''
+      width: 64px
+      height: 1px
+      background: #000000
+      position: absolute
+      top: 50%
+      right: -16px
+      pointer-events: none
+      transform: translate(100%, -0.5px)
+      transition: transform 0.5s ease
+      transform-origin: 0% 50%
+    &:hover::before
+      transform: translate(100%, -0.5px) scaleX(1.5)
+  @media (max-width: 1120px)
+    padding: 3em
+  @media (max-width: 480px)
+    padding: 24px 24px 48px 0
+    position: static
+    max-width: 100%
+    display: none
+  &--mob
+    display: none
+    @media (max-width: 480px)
+      display: block
+
+
+// Рассылка
+.gallery__mailing
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  // padding: 7.5em 3.5em 5em 3.5em // 56px сбоку
+  padding: 7.5em 3em 4em 3em // 48px сбоку
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: flex-start
+  text-align: center
+  .i-envelope
+    margin-bottom: 2em
+    @media (max-width: 480px)
+      margin-bottom: 32px
+  &-title
+    +f(16)
+    +tt(bold)
+    text-transform: uppercase
+    letter-spacing: 0.1em
+    margin-bottom: 3.5em
+    @media (max-width: 1120px)
+      margin-bottom: 2em
+    @media (max-width: 480px)
+      font-size: 16px
+      margin-bottom: 56px
+  &-text
+    +f(14)
+    +tt(reg)
+    line-height: 1.57
+    letter-spacing: 0.05em
+    @media (max-width: 855px)
+      font-size: 14px
+  &-form
+    width: 100%
+    margin-top: auto
+    position: relative
+    &.is-focused
+      .gallery__mailing-btn
+        opacity: 1
+  @media (max-width: 1120px)
+    padding: 4em 2.5em
+  @media (max-width: 960px)
+    padding: 3em 14px
+  @media (max-width: 855px)
+    padding: 3em 28px
+  @media (max-width: 480px)
+    padding-top: 80px
+    padding-left: 40px
+    padding-right: 40px
+
+
+// Название и цена
+.gallery__product
+  display: flex
+  flex-direction: row
+  align-items: flex-start
+  justify-content: space-between
+  padding-top: 1.5em
+  transform: translateY(100%)
+  @media (max-width: 480px)
+    padding-top: 24px
+  &-name
+    +tt(md)
+    font-size: 10px
+    text-transform: uppercase
+    line-height: 1.8
+    max-width: 75%
+    letter-spacing: 0.1em
+    color: $black
+    &:visited, &:focus, &:active
+      color: $black
+    @media (max-width: 960px)
+      max-width: 65%
+      font-size: 9px
+    @media (max-width: 855px)
+      font-size: 10px
+  &-price
+    +tt(ex)
+    font-size: 14px
+    text-transform: uppercase
+    letter-spacing: 0.05em
+    @media (max-width: 480px)
+      font-size: 12px
+  &-num
+    margin-right: 5px
+

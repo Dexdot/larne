@@ -1,0 +1,205 @@
+$menuTop: 22vh
+.menu
+  position: fixed
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  z-index: 3
+
+  transition: 0.65s cubic-bezier(.4, 0, .2, 1)
+  background: #fff
+  transform: translateX(-100%)
+  pointer-events: none
+  user-select: none
+  &.is-active
+    transition: 0.65s cubic-bezier(.4, 0, .2, 1)
+    transform: translateX(0%)
+    pointer-events: auto
+    user-select: auto
+    .menu__top
+      opacity: 1
+      pointer-events: auto
+      user-select: auto
+      transition: 0.35s ease-out 0.5s
+  @media (max-width: 990px)
+    display: block
+  &__container
+    z-index: 1
+    position: relative
+    width: 100%
+    height: 100%
+
+    // +scrollbar
+    @media (max-width: 480px)
+      padding: 24px 5%
+  &__top
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    // padding-right: 44px
+    position: absolute
+    top: 48px
+    left: 0
+    right: 0
+    padding-left: 5.5%
+    padding-right: calc(5.5% + 64px)
+
+    opacity: 0
+    pointer-events: none
+    user-select: none
+    transition: 0.2s ease-out 0.1s
+    @media (max-width: 480px)
+      top: 24px
+      padding-left: 5%
+      padding-right: calc(5% + 64px)
+  &__logo
+    max-width: 7.5em
+    height: 1.5em
+    display: block
+    .i-logo
+      width: 100%
+      height: 100%
+      @media (max-width: 480px)
+        width: 108px
+        height: auto
+  &__search
+    transform: translateY(1px)
+    width: 22px
+    height: 22px
+    display: flex
+    align-items: center
+    justify-content: center
+    +unbtn
+    .i-search
+      width: 22px
+      height: 22px
+      stroke-width: 1px
+  .hamburger
+    top: 2px
+
+  
+  &__list
+    transform: translateX(-4px)
+    &-item
+      +f(60)
+      margin-bottom: 1.136em
+      line-height: 1
+      &:last-child
+        margin-bottom: 0
+  &__nav
+    position: absolute
+    top: $menuTop
+    left: 5.5%
+
+    pointer-events: none
+    user-select: none
+    @media (max-width: 480px)
+      left: 5%
+    .menu__list-item
+      opacity: 0
+      transform: translateY(-60px)
+      transition: .6s cubic-bezier(.4, 0, .2, 1)
+      &:nth-child(1)
+        transition-delay: 0.45s
+      &:nth-child(2)
+        transition-delay: 0.4s
+      &:nth-child(3)
+        transition-delay: 0.35s
+      &:nth-child(4)
+        transition-delay: 0.3s
+      &:nth-child(5)
+        transition-delay: 0.25s
+    &.is-active
+      pointer-events: auto
+      user-select: auto
+      .menu__list-item
+        opacity: 1
+        transform: translateY(0)
+
+  &__link
+    +tt(ex)
+    line-height: 1
+    letter-spacing: 0.025em
+    color: $black
+    &:visited, &:focus, &:active
+      color: $black    
+  &__btm
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    width: 100%
+
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 104px
+    padding-left: 5.5%
+    padding-right: 5.5%
+    @media (max-width: 480px)
+      padding-left: 5%
+      padding-right: 5%
+  &__phone
+    letter-spacing: 0.05em
+    font-size: 12px
+    color: $black
+    +tt(bold)
+  &__login, &__name
+    letter-spacing: 0.05em
+    text-transform: uppercase
+    font-size: 10px
+    +tt(bold)
+    +unbtn
+  &__name
+    color: $black
+    &:focus,
+    &:visited,
+    &:active
+      color: $black
+  
+  &__catalog
+    position: absolute
+    top: $menuTop
+    left: 5.5%
+
+    pointer-events: none
+    user-select: none
+    @media (max-width: 480px)
+      left: 5%
+    .menu__list-item
+      +f(50)
+      opacity: 0
+      transform: translateY(-60px)
+      transition: .6s cubic-bezier(.4, 0, .2, 1)
+      &:nth-child(1)
+        transition-delay: 0.45s
+      &:nth-child(2)
+        transition-delay: 0.4s
+      &:nth-child(3)
+        transition-delay: 0.35s
+      &:nth-child(4)
+        transition-delay: 0.3s
+      &:nth-child(5)
+        transition-delay: 0.25s
+    &.is-active
+      pointer-events: auto
+      user-select: auto
+      .menu__list-item
+        opacity: 1
+        transform: translateY(0)
+  &__back
+    +unbtn
+    +tt(ex)
+    font-size: 14px
+
+    display: none
+    position: absolute
+    bottom: 104px
+    left: 5.5%
+    @media (max-width: 480px)
+      left: 5%
+
+

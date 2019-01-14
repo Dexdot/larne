@@ -1,0 +1,298 @@
+@include('../blocks/head.html')
+<!-- ./head -->
+
+@include('../blocks/header-mob.html')
+<!-- prealoder -->
+@include('../blocks/preloader.html')
+
+<main class="main-wrapper">
+	<div class="sections">
+		<section id="hero">
+			<div>
+				<div class="hero-image" data-color="dark" style="background-image: url(img/hero/h1.jpg)"></div>
+				<div class="hero-image" data-color="light" style="background-image: url(img/hero/h2.jpg)"></div>
+				<div class="hero-image" data-color="light" style="background-image: url(img/hero/h3.jpg)"></div>
+				<div class="hero-cover"></div>
+			</div>
+			@include('../blocks/header.html')
+			<div class="hero">
+				<div class="fluid">
+					<div class="hero__inner">
+
+						<!-- hero__content -->
+						<div class="hero__content">
+							<div class="hero__content-block">
+								<h1 class="hero__title">Blossom.
+									<span class="hero__title-num">01</span>
+								</h1>
+								<a class="hero__subtitle" href="./catalog.html">
+									— Шелк и атлас в весенней коллекции Larne.
+								</a>
+							</div>
+							<div class="hero__content-block">
+								<h1 class="hero__title">Blossom.
+									<span class="hero__title-num">02</span>
+								</h1>
+								<a class="hero__subtitle" href="./catalog.html">
+									— Шелк и атлас в весенней коллекции Larne.
+								</a>
+							</div>
+							<div class="hero__content-block">
+								<h1 class="hero__title">Blossom.
+									<span class="hero__title-num">03</span>
+								</h1>
+								<a class="hero__subtitle" href="./catalog.html">
+									— Шелк и атлас в весенней коллекции Larne.
+								</a>
+							</div>
+						</div>
+						<!-- ./hero__content -->
+
+						<button class="hero__toggle">
+							@include('../svg/dotted.html')
+							<span class="hero__icon-wrap">
+								<img src="img/hero/h2-preview.jpg" alt="" class="hero__icon">
+							</span>
+							<span class="hero__icon-wrap">
+								<img src="img/hero/h3-preview.jpg" alt="" class="hero__icon">
+							</span>
+							<span class="hero__icon-wrap">
+								<img src="img/hero/h1-preview.jpg" alt="" class="hero__icon">
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			@include('../blocks/footer-inside.html')
+		</section>
+		<section id="gallery">
+			@include('../blocks/header.html')
+			<div class="fluid">
+				@include('../blocks/gallery.html')
+			</div>
+			@include('../blocks/footer-inside.html')
+		</section>
+		<section id="products">
+			@include('../blocks/header.html')
+			<div class="products-wrapper">
+
+				<!-- products-aside -->
+				<div class="fluid">
+					<div class="products-aside">
+						<div class="section-header">
+							<div class="section-header__icons">
+								<div class="section-header__hexagon">
+									@include('../svg/hexagon.html')
+									<!-- hexagon-fill -->
+									@include('../svg/hexagon-fill.html')
+								</div>
+								<div class="section-header__line"></div>
+							</div>
+							<div>
+								<h2 class="section-header__title">Новинки</h2>
+								<a class="section-header__link" href="./catalog.html">
+									Смотреть каталог @include('../svg/arrow.html')
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ./products-aside -->
+
+				<!-- products -->
+				<div class="products">
+					<div class="products__content">
+
+						<div class="product">
+							<div class="product__inner">
+								<a href="./item.html" class="product__img-wrap" draggable="false" ondragstart="return false;">
+									<img class="product__img" draggable="false" ondragstart="return false;" src="img/products/1.jpg" alt="Голубое платье с пышной юбкой">
+								</a>
+							</div>
+							<div class="product__info">
+								<a class="product__name" href="./item.html" draggable="false" ondragstart="return false;">
+									Голубое платье с пышной юбкой
+								</a>
+								<span class="product__price">
+									<span class="product__num">6500</span>&#8381;
+								</span>
+							</div>
+						</div>
+						<div class="product">
+							<div class="product__inner">
+								<a href="./item.html" class="product__img-wrap" draggable="false" ondragstart="return false;">
+									<img class="product__img" draggable="false" ondragstart="return false;" src="img/products/2.jpg" alt="Шифоновое платье лавандового цвета">
+								</a>
+							</div>
+							<div class="product__info">
+								<a class="product__name" href="./item.html" draggable="false" ondragstart="return false;">
+									Шифоновое платье лавандового цвета
+								</a>
+								<span class="product__price">
+									<span class="product__num">5800</span>&#8381;
+								</span>
+							</div>
+						</div>
+						<div class="product">
+							<div class="product__inner">
+								<a href="./item.html" class="product__img-wrap" draggable="false" ondragstart="return false;">
+									<img class="product__img" draggable="false" ondragstart="return false;" src="img/products/3.jpg" alt="Голубое платье с сердечками">
+								</a>
+
+							</div>
+							<div class="product__info">
+								<a class="product__name" href="./item.html" draggable="false" ondragstart="return false;">
+									Голубое платье с сердечками
+								</a>
+								<span class="product__price">
+									<span class="product__num">6200</span>&#8381;
+								</span>
+							</div>
+						</div>
+						<div class="product">
+							<div class="product__inner">
+								<a href="./item.html" class="product__img-wrap" draggable="false" ondragstart="return false;">
+									<img class="product__img" draggable="false" ondragstart="return false;" src="img/products/4.jpg" alt="Голубое платье с пышной юбкой">
+								</a>
+							</div>
+							<div class="product__info">
+								<a class="product__name" href="./item.html" draggable="false" ondragstart="return false;">
+									Голубое платье с пышной юбкой
+								</a>
+								<span class="product__price">
+									<span class="product__num">6500</span>&#8381;
+								</span>
+							</div>
+						</div>
+						<div class="product">
+							<div class="product__inner">
+								<a href="./item.html" class="product__img-wrap" draggable="false" ondragstart="return false;">
+									<img class="product__img" draggable="false" ondragstart="return false;" src="img/products/2.jpg" alt="Шифоновое платье лавандового цвета">
+								</a>
+							</div>
+							<div class="product__info">
+								<a class="product__name" href="./item.html" draggable="false" ondragstart="return false;">
+									Шифоновое платье лавандового цвета
+								</a>
+								<span class="product__price">
+									<span class="product__num">5800</span>&#8381;
+								</span>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+				<!-- ./products -->
+
+			</div>
+			@include('../blocks/footer-inside.html')
+		</section>
+		<section id="articles">
+			@include('../blocks/header.html')
+			<div class="articles">
+
+				<!-- articles__aside -->
+				<div class="articles__aside">
+					<div class="section-header">
+						<div class="section-header__icons">
+							<div class="section-header__hexagon">
+								@include('../svg/hexagon.html')
+								<!-- hexagon-fill -->
+								@include('../svg/hexagon-fill.html')
+							</div>
+							<div class="section-header__line"></div>
+						</div>
+						<div>
+							<h2 class="section-header__title">Журнал.</h2>
+							<a class="section-header__link" href="./blog.html">
+								Больше статей @include('../svg/arrow.html')
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- ./articles__aside -->
+
+				<!-- articles__content -->
+				<div class="articles__content">
+
+					<div class="article">
+						<div class="article__info">
+							<h3 class="article__title">
+								<a href="./article.html">Ася Резникова в Dior</a>
+							</h3>
+							<p class="article__text">Российская модель, которая сегодня стала звездой шоу модного Дома</p>
+							<span class="article__date">21 февраля</span>
+						</div>
+						<a class="article__img-wrap" href="./article.html">
+							<img class="article__img" src="img/articles/1.jpg" alt="Ася Резникова в Dior">
+						</a>
+					</div>
+					<div class="article">
+						<div class="article__info">
+							<h3 class="article__title">
+								<a href="./article.html">Larne SS/2018</a>
+							</h3>
+							<p class="article__text">Мы вдохновлялась эстетикой 60-х — отсюда платья из органзы, переработанный деним и дух
+								сексуальной раскрепощенности</p>
+							<span class="article__date">16 февраля</span>
+						</div>
+						<a class="article__img-wrap" href="./article.html">
+							<img class="article__img" src="img/articles/2.jpg" alt="Larne SS/2018">
+						</a>
+					</div>
+					<div class="article">
+						<div class="article__info">
+							<h3 class="article__title">
+								<a href="./article.html">Юбка деловой женщины</a>
+							</h3>
+							<p class="article__text">Коктейль из тигровой лианы и листа ревеня в изумрудном сердце</p>
+							<span class="article__date">16 февраля</span>
+						</div>
+						<a class="article__img-wrap" href="./article.html">
+							<img class="article__img" src="img/articles/3.jpg" alt="Юбка деловой женщины">
+						</a>
+					</div>
+					<div class="article">
+						<div class="article__info">
+							<h3 class="article__title">
+								<a href="./article.html">Лучшие роли Элизабет Тэйлор</a>
+							</h3>
+							<p class="article__text">В честь королевы Голливуда, которой сегодня исполнилось бы 86</p>
+							<span class="article__date">11 февраля</span>
+						</div>
+						<a class="article__img-wrap" href="./article.html">
+							<img class="article__img" src="img/articles/4.jpg" alt="Лучшие роли Элизабет Тэйлор">
+						</a>
+					</div>
+				</div>
+				<!-- ./articles__content -->
+
+			</div>
+			@include('../blocks/footer-inside.html')
+		</section>
+		@include('../blocks/instagram.html')
+	</div>
+</main>
+
+<!-- menu -->
+@include('../blocks/menu.html')
+<!-- help -->
+@include('../blocks/help.html')
+<!-- checkout -->
+@include('../blocks/checkout.html')
+<!-- reg -->
+@include('../blocks/reg.html')
+<!-- recovery -->
+@include('../blocks/recovery.html')
+<!-- login -->
+@include('../blocks/login.html')
+<!-- search -->
+@include('../blocks/search.html')
+<!-- subscribe -->
+@include('../blocks/subscribe.html')
+
+<script defer src="js/index.js"></script>
+
+<!-- footer -->
+@include('../blocks/footer.html')
